@@ -747,9 +747,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    height: 250px;
 }
 
 #speakers .speaker .details {
