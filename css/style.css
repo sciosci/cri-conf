@@ -56,7 +56,8 @@
 body {
   background: #fff;
   color: #2f3138;
-  font-family: "ShermanSerif", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  /* font-family: "ShermanSerif", sans-serif; */
 }
 
 a {
@@ -83,7 +84,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "ShermanSans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  /* font-family: "ShermanSans", sans-serif; */
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -1580,6 +1582,38 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+/* Twitter style */
+#header .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #222636;
+  color: #eee;
+  line-height: 1;
+  padding: 8px 0;
+  margin-left: 20px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .social-links a:hover {
+  background: #D44500;
+  color: #fff;
+}
+
+.back-to-top:focus {
+  background: #D44500;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #D44500;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
