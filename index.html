@@ -46,6 +46,46 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+  
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+
+  <script>
+    function AddReadMore() {
+        //This limit you can set after how much characters you want to show Read More.
+        var carLmt = 200;
+        // Text to show when text is collapsed
+        var readMoreTxt = " + Show More";
+        // Text to show when text is expanded
+        var readLessTxt = " - Show Less";
+
+
+        //Traverse all selectors with this class and manupulate HTML part to show Read More
+        $(".addReadMore").each(function() {
+            if ($(this).find(".firstSec").length)
+                return;
+
+            var allstr = $(this).text();
+            if (allstr.length > carLmt) {
+                var firstSet = allstr.substring(0, carLmt);
+                var secdHalf = allstr.substring(carLmt, allstr.length);
+                var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+                $(this).html(strtoadd);
+            }
+
+        });
+        //Read More and Read Less Click Event binding
+        $(document).on("click", ".readMore,.readLess", function() {
+            $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+        });
+    }
+    $(function() {
+        //Calling function after Page Load
+        AddReadMore();
+    });
+    </script>
+
 </head>
 
 <body>
@@ -154,7 +194,7 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Ranjini_Ambalavanar.jpg" alt="Ranjini Ambalavanar" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Ranjini Ambalavanar</a></h3>
+                  <h3><a href="speaker_details/sd_RanjiniAmbalavanar.html">Ranjini Ambalavanar</a></h3>
                   <p>ORI</p>
                 </div>
               </div>
@@ -190,7 +230,7 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <img src="img/speakers/Elisabeth_Bik.png" alt="Elisabeth Bik" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Elisabeth Bik</a></h3>
+                  <h3><a href="speaker_details/sd_ElisabethBik.html">Elisabeth Bik</a></h3>
                   <p>Harbers-Bik LLC</p>
                 </div>
               </div>
@@ -208,7 +248,7 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                 <img src="img/speakers/Edward_Delp.jpg" alt="Edward Delp" class="img-fluid">
                 <div class="details">
-                  <h3><a href="speaker_details/sd_EdwardJDelp.html">Edward J. Delp</a></h3>
+                  <h3><a href="#speaker_details/sd_EdwardJDelp.html">Edward J. Delp</a></h3>
                   <p>Purdue University</p>
                 </div>
               </div>
@@ -299,7 +339,7 @@
           <h2>Panelists</h2>
           <h3 style="color: #9195a2" class="text-center">(in alphabetical order)</h3>
       </div>
-      <p><strong>IJsbrand Jan Aalbersberg</strong> (Scopus), <strong>Paul Brookes</strong> (University of Rochester), <strong>Jana Christopher</strong> (Image-Integrity), 
+      <p><strong>IJsbrand Jan Aalbersberg</strong> (Scopus), <strong>Erica Boxheimer</strong> (EMBO), <strong>Paul Brookes</strong> (University of Rochester), <strong>Jana Christopher</strong> (Image-Integrity), 
         <strong>Renee Hoch</strong> (PLOS One), <strong>Wanda Jones</strong> (ORI), <strong>Stephanie Lee</strong> (Buzzfeed), <strong>Benyamin Margolis</strong> (ORI), <strong>Bernd Pulverer</strong> (EMBO), 
 	<strong>Maria Kowalczuk</strong> (Springer Nature), <strong>Amit K. Roy-Chowdhury</strong> (UC Riverside), <strong>William C. Trenkle</strong> (USDA), <strong>Richard Van Noorden</strong> (Nature), 
         <strong>Wouter Vandevelde</strong> (KU Leuven), <strong>Mary Walsh</strong> (Harvard University)</p>
@@ -351,7 +391,28 @@
               <img src="img/speakers/Ranjini_Ambalavanar2.jpg" alt="Ranjini Ambalavanar">
             </div>
             <h4>Speaker <span>Ranjini Ambalavanar, ORI</span></h4>
-            <!-- <p>Facere provident incidunt quos voluptas.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Examining Questioned Data &#8212 Detection Tools and Need for Automation</strong></h6>
+              <!-- <h7 class="collapse" id="collapseExample" aria-expanded="false">
+                Research misconduct in the federal regulation (42 C.F.R. Part 93) means fabrication, falsification, 
+                or plagiarism (FFP) in proposing, performing, or reviewing research, or in reporting research results 
+                (§ 93.103). This session will discuss the types of questioned data and tools that currently are used 
+                to identify and confirm FFP with special emphasis on the need for additional tools and automation. 
+                Examples of different types of falsified/fabricated (FF) data from closed misconduct cases at the 
+                Office of Research Integrity (ORI) and forensic tools used by ORI to detect and confirm intentional 
+                FF will be presented.<pre></pre>
+              </h7> 
+              <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>-->
+              <div class="addReadMore showlesscontent">
+                Research misconduct in the federal regulation (42 C.F.R. Part 93) means fabrication, falsification, 
+                or plagiarism (FFP) in proposing, performing, or reviewing research, or in reporting research results 
+                (§ 93.103). This session will discuss the types of questioned data and tools that currently are used 
+                to identify and confirm FFP with special emphasis on the need for additional tools and automation. 
+                Examples of different types of falsified/fabricated (FF) data from closed misconduct cases at the 
+                Office of Research Integrity (ORI) and forensic tools used by ORI to detect and confirm intentional 
+                FF will be presented.
+              </div>
+            </div>
           </div>
         </div>
 
@@ -392,7 +453,22 @@
               <img src="img/speakers/Michele_Nuijten2.jpeg" alt="Michèle Nuijten">
             </div>
             <h4>Speaker <span>Michèle Nuijten, Tilburg University</span></h4>
-            <!-- <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong><em>statcheck</em>: a spellchecker for statistics</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Half of the psychology papers contain inconsistent statistical results in which the reported p-value 
+                does not match the reported test statistic and degrees of freedom. Most of these inconsistencies seem 
+                to be small and inconsequential, but in over 12.5% of the papers there are inconsistencies that might 
+                change the statistical conclusion. Such statistical reporting inconsistencies affect the reproducibility 
+                and quality of scientific findings.<pre></pre>
+                We developed the R package “<em>statcheck</em>” and the accompanying web app <a href="http://statcheck.io">http://statcheck.io</a> 
+                to automatically find these inconsistencies. In my talk, I will briefly explain how <em>statcheck</em> 
+                works. I will discuss <em>statcheck</em>’s potential in preventing statistical errors through self-checks 
+                and peer review, and discuss how <em>statcheck</em> can be used for meta-research. Furthermore, I will 
+                briefly give an overview of current developments, including a statcheck Word add-in and the implementation 
+                of Natural Language Processing techniques to expand <em>statcheck</em>’s searching algorithm.
+              </div>
+            </div>
           </div>
         </div>
 
@@ -411,7 +487,18 @@
               <img src="img/speakers/Edward_Delp2.jpg" alt="Edward J. Delp">
             </div>
             <h4>Speaker <span>Edward J. Delp, Purdue University</span></h4>
-            <!-- <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>A System for Forensic Analysis of Scientific Images</strong></h6>
+              <div class="addReadMore showlesscontent">
+                In this talk I will describe a system that we are developing for the forensic analysis of images and other 
+                media extracted from a scientific publication. This system uses many modern media forensic methods to 
+                examine images and determine if the image has been likely altered or modified. The tools that are available 
+                include duplication detection, copy/move detection, provenance analysis and media forensics tools. The 
+                current system has methods for extracting images, figures, and captions and maintaining the relative 
+                relationships of the figures in a paper. The system has a simple and intuitive web-based user interface, a 
+                sophisticated database, and is easily extensible using Docker containers.<pre></pre>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -441,11 +528,10 @@
           <div class="col-md-10">
             <h4>Panel <span>Publishers</span></h4>
             <ul>
+              <li>Bernd Pulverer, EMBO (panel chair)</li>
               <li>Renee Hoch, PLOS One</li>
               <li>IJsbrand Jan Aalbersberg, Scopus</li>
-	      <li>Bernd Pulverer, EMBO</li>
-	      <li>Maria Kowalczuk, Springer Nature</li>
-              <li>Daniel Acuna, Syracuse University (moderator only)</li>
+              <li>Maria Kowalczuk, Springer Nature</li>
             </ul>
           </div>
         </div>
@@ -486,7 +572,21 @@
               <img src="img/speakers/Elisabeth_Bik2.png" alt="Elisabeth Bik">
             </div>
             <h4>Speaker <span>Elisabeth Bik, Harbers-Bik LLC</span></h4>
-            <!-- <p>Facere provident incidunt quos voluptas.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Image duplication detection tools &#8212 insights from a human spotter</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Despite peer-review and editorial screening, science papers can still contain images or other data of concern. 
+                A visual scan of 20,000 papers published in 40 biomedical journals showed that 4% contained inappropriately 
+                duplicated images. Papers containing incorrect or even falsified data could lead to wasted time and money spent 
+                by other researchers trying to reproduce those results. Thorough image screening before publication would be 
+                beneficial for editors, publishers, and readers, and act as a deterrent for fraudulent submissions. There is a 
+                great need for high-throughput computational tools to find image duplications and manipulations in scientific 
+                manuscripts, and to help detect the growing number of fabricated manuscripts produced by paper mills. Elisabeth 
+                Bik will present some case examples, insights, and challenges that she has encountered as a human visual 
+                duplication detector.<br>
+              </div>
+              <!-- <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a> -->
+            </div>
           </div>
         </div>
 
@@ -497,7 +597,24 @@
               <img src="img/speakers/Debora_Weber_Wulff2.jpg" alt="Debora Weber-Wulff">
             </div>
             <h4>Speaker <span>Debora Weber-Wulff, HTW Berlin - University of Applied Sciences</span></h4>
-            <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Responsible Use of Support Tools for Plagiarism Detection</strong></h6>
+              <div class="addReadMore showlesscontent">
+                <div>
+                  Many academic institutions are of the opinion that they can simply solve the problem of plagiarism 
+                  by purchasing the use of so-called plagiarism detection software. But as a recent test of such 
+                  support tools shows, the systems don't find all plagiarism and will report text overlap that is not 
+                  plagiarism as if it were. Institutions that rely only on some similarity measure for determining 
+                  sanctions need to be aware of how meaningless the numbers these systems report are.
+                </div>
+                <div>
+                  In this talk the results of the recent test of support tools for detecting plagiarism conducted by 
+                  the European Network of Academic Integrity will be presented, followed by a discussion of what 
+                  constitutes the responsible use of such tools.
+                </div>
+              </div>
+              <!-- <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a> -->
+            </div>         
           </div>
         </div>
 
@@ -626,7 +743,26 @@
               <img src="img/speakers/Walter_Scheirer2.jpg" alt="Walter Scheirer">
             </div>
             <h4>Speaker <span>Walter Scheirer, University of Notre Dame</span></h4>
-            <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Understanding the Provenance of Visual Disinformation Targeting Science</strong></h6>
+              <div class="addReadMore showlesscontent">
+                The COVID-19 pandemic has attracted significant attention to scientific matters related to the cause, treatment, 
+                and prevention of the disease that has upended our lives. Alarmingly, not all of the information available on the 
+                Internet is what it appears to be. Deceptive memes, bogus ads, and fabricated infographics are proliferating, with 
+                all threatening to undermine the public's trust in science. Given the vast scale of the problem, an automated 
+                capability that can identify new instances of visual disinformation, trace its origin, and ultimately flag it as 
+                being problematic is needed. But compared to text, visual content presents unique challenges for media forensics. 
+                This talk presents an end-to-end processing pipeline for image provenance analysis, which works at real-world scale. 
+                It employs a cutting-edge image filtering solution that is able to find related images, as well as novel techniques 
+                for obtaining a provenance graph that expresses how the images, as nodes, are ancestrally connected. Building from 
+                provenance analysis, the talk goes on to introduce a scalable automated visual recognition pipeline for discovering 
+                meme genres of diverse appearance. This pipeline can ingest meme images from a social network, apply computer 
+                vision-based techniques to extract features and index new images into a database, and then organize the memes into 
+                related genres. Recent examples of visual disinformation targeting science will be highlighted, including repurposed 
+                imagery, parasitic advertising, and pandemic-related memes. Finally, the talk will conclude with thoughts on continued 
+                research in this direction.<pre></pre>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -675,7 +811,16 @@
               <img src="img/speakers/Ivan_Oransky2.jpg" alt="Ivan Oransky">
             </div>
             <h4>Speaker <span>Ivan Oransky, Retraction Watch</span></h4>
-            <!-- <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>From Cancer to COVID-19, Does Science Self-Correct?</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Rapid publication of results &#8212; particularly on preprint servers &#8212; has grown dramatically during the COVID-19 pandemic, 
+                and has forced researchers, health care professionals, journalists, and others to grapple with the concept of reliable 
+                and actionable information. The pandemic has given rise to more than 80 retractions at the time of this writing. Is that 
+                cause for concern? My lens for this talk will be ten years of experience reporting on retractions for Retraction Watch, 
+                including creating the world’s most comprehensive database of retractions, with close to 24,000 and counting.<pre></pre>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -705,11 +850,11 @@
           <div class="col-md-10">
             <h4>Panel <span>Investigators/whistleblowers</span></h4>
             <ul>
+              <li>Paul Brookes, University of Rochester (panel chair)</li>
+              <li>Boris Barbour, The PubPeer Foundation</li>
               <li>Elisabeth Bik, Harbers-Bik LLC</li>
+              <li>Erica Boxheimer, EMBO</li>
               <li>Jana Christopher, Image-Integrity</li>
-              <li>Paul Brookes, University of Rochester</li>
-	      <li>Boris Barbour, The PubPeer Foundation</li>
-              <li>Daniel Acuna, Syracuse University (moderator only)</li>
             </ul>
           </div>
         </div>
@@ -914,8 +1059,7 @@
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
+
 <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="lib/easing/easing.min.js"></script>
 <script src="lib/superfish/hoverIntent.js"></script>

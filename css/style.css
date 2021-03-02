@@ -5,6 +5,54 @@
   License: https://bootstrapmade.com/license/
 */
 
+.addReadMore.showlesscontent .SecSec,
+.addReadMore.showlesscontent .readLess {
+  display: none;
+}
+
+.addReadMore.showmorecontent .readMore {
+  display: none;
+}
+
+.addReadMore .readMore,
+.addReadMore .readLess {
+  margin-left: 2px;
+  color: #D44500;
+  cursor: pointer;
+}
+
+.addReadMoreWrapTxt.showmorecontent .SecSec,
+.addReadMoreWrapTxt.showmorecontent .readLess {
+  display: block;
+}
+
+.module {
+  width: 500px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.module .collapseExample.collapse:not(.show) {
+    height: 42px !important;
+    overflow: hidden;
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+
+.module .collapseExample.collapsing {
+    height: 42px !important;
+}
+
+.module a.collapsed:after  {
+    content: '+ Show More';
+}
+
+.module a:not(.collapsed):after {
+    content: '- Show Less';
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
