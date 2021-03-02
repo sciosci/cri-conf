@@ -27,7 +27,8 @@
 }
 
 .module {
-  width: 500px;
+  width: auto;
+  margin-left: 50px;
   font-size: 14px;
   line-height: 1.5;
 }
