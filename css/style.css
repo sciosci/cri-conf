@@ -116,14 +116,17 @@ a {
 
 a.otherlink {
   color: #2f3138;
-  text-decoration: underline;
-  text-decoration-color: #ccc; 
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #afb9cf; 
 }
 
 a.otherlink:hover {
   color: #D44500;
   cursor: pointer;
 }
+
+
 
 a:hover,
 a:active,
