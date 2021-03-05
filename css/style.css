@@ -114,6 +114,17 @@ a {
   transition: 0.5s;
 }
 
+a.otherlink {
+  color: #2f3138;
+  text-decoration: underline;
+  text-decoration-color: #ccc; 
+}
+
+a.otherlink:hover {
+  color: #D44500;
+  cursor: pointer;
+}
+
 a:hover,
 a:active,
 a:focus {
