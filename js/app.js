@@ -57,16 +57,12 @@ authenticate = async () => {
                     visible: false
                 },
                 {
-                    width: "20%",
-                    targets: 3
-                },
-                {
-                    width: "20%",
-                    targets: 2,
+                    width: "10%",
+                    targets: 1
                 },
                 {
                     width: "30%",
-                    targets: 3,
+                    targets: 2,
                 },
                 {
                     searchPanes: {
@@ -82,6 +78,7 @@ authenticate = async () => {
             ],
             // deferRender: true,
             initComplete: updateUI,
+            autoWidth: false,
             dom: 'Plfrtip',
             searchPanes: {
                 layout: 'columns-3',
