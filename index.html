@@ -2,40 +2,90 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>cri-conf 2021 - Computational Research Integrity Conference</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Computational research integrity, scientific misconduct, research integrity investigations" name="keywords">
-    <meta content="The Computational Research Integrity Conference (CRI-CONF) will bring researchers from Biomedical Sciences and Ethics as well as Computer Scientists, AI researchers, and statisticians to discuss how research integrity investigations can be made faster, more accurate, and systematic with the use of computational methods." name="description">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158260619-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- Favicons -->
-<!--    <link href="img/favicon.png" rel="icon">-->
-<!--    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">-->
+  gtag('config', 'UA-158260619-1');
+  </script>
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/fa232ea75a976a038d26ac610/a6f27bf6df7acb83b517f8b0b.js");</script>
+  <meta charset="utf-8">
+  <title>cri-conf 2021 - Computational Research Integrity Conference</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Computational research integrity, scientific misconduct, research integrity investigations" name="keywords">
+  <meta content="The Computational Research Integrity Conference (CRI-CONF) will bring researchers from Biomedical Sciences and Ethics as well as Computer Scientists, AI researchers, and statisticians to discuss how research integrity investigations can be made faster, more accurate, and systematic with the use of computational methods." name="description">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
-          rel="stylesheet">
+  <!-- Favicons -->
+  <!--    <link href="img/favicon.png" rel="icon">-->
+  <!--    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">-->
 
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+        rel="stylesheet">
 
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">-->
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">-->
 
 
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-      Theme Name: TheEvent
-      Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-      Author: BootstrapMade.com
-      License: https://bootstrapmade.com/license/
-    ======================================================= -->
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+
+  <script>
+    function AddReadMore() {
+        //This limit you can set after how much characters you want to show Read More.
+        var carLmt = 190;
+        // Text to show when text is collapsed
+        var readMoreTxt = " + Show More";
+        // Text to show when text is expanded
+        var readLessTxt = " - Show Less";
+
+
+        //Traverse all selectors with this class and manupulate HTML part to show Read More
+        $(".addReadMore").each(function() {
+            if ($(this).find(".firstSec").length)
+                return;
+
+            var allstr = $(this).text();
+            if (allstr.length > carLmt) {
+                var firstSet = allstr.substring(0, carLmt);
+                var secdHalf = allstr.substring(carLmt, allstr.length);
+                var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+                $(this).html(strtoadd);
+            }
+
+        });
+        //Read More and Read Less Click Event binding
+        $(document).on("click", ".readMore,.readLess", function() {
+            $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+        });
+    }
+    $(function() {
+        //Calling function after Page Load
+        AddReadMore();
+    });
+    </script>
+
 </head>
 
 <body>
@@ -134,14 +184,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Daniel_Acuna.jpeg" alt="Daniel Acuna" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Daniel Acuna (organizer)</a></h3>
+                  <h3><a href="#speaker_details/sd_DanielAcuna.html">Daniel Acuna (organizer)</a></h3>
                   <p>Syracuse University</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -149,14 +193,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Ranjini_Ambalavanar.jpg" alt="Ranjini Ambalavanar" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Ranjini Ambalavanar</a></h3>
+                  <h3><a href="speaker_details/sd_RanjiniAmbalavanar.html">Ranjini Ambalavanar</a></h3>
                   <p>ORI</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -164,14 +202,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Boris_Barbour.jpg" alt="Boris Barbour" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Boris Barbour</a></h3>
+                  <h3><a href="#a">Boris Barbour</a></h3>
                   <p>The PubPeer Foundation</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -179,14 +211,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Thorsten_Beck.jpg" alt="Thorsten Beck" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Thorsten Beck</a></h3>
+                  <h3><a href="#a">Thorsten Beck</a></h3>
                   <p>HEADT Centre - Humboldt University of Berlin</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -194,14 +220,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Mario_Biagioli.jpg" alt="Mario Biagioli" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Mario Biagioli</a></h3>
+                  <h3><a href="#a">Mario Biagioli</a></h3>
                   <p>UCLA</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -209,14 +229,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <img src="img/speakers/Elisabeth_Bik.png" alt="Elisabeth Bik" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Elisabeth Bik</a></h3>
+                  <h3><a href="speaker_details/sd_ElisabethBik.html">Elisabeth Bik</a></h3>
                   <p>Harbers-Bik LLC</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -224,14 +238,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                 <img src="img/speakers/Jennifer_Byrne.png" alt="Jennifer Byrne" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Jennifer Byrne</a></h3>
+                  <h3><a href="#speaker_details/sd_JenniferByrne.html">Jennifer Byrne</a></h3>
                   <p>The University of Sydney</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -239,14 +247,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                 <img src="img/speakers/Edward_Delp.jpg" alt="Edward Delp" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Edward J. Delp</a></h3>
+                  <h3><a href="#speaker_details/sd_EdwardJDelp.html">Edward J. Delp</a></h3>
                   <p>Purdue University</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
           </div>
@@ -254,14 +256,8 @@
                 <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                   <img src="img/speakers/Michael_Lauer.jpg" alt="Michael Lauer" class="img-fluid">
                   <div class="details">
-                    <h3><a href="#">Michael Lauer</a></h3>
+                    <h3><a href="#a">Michael Lauer</a></h3>
                     <p>NIH</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook"></i></a>
-                      <a href=""><i class="fa fa-google-plus"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a>
-                    </div>
                   </div>
                 </div>
             </div>
@@ -269,14 +265,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
                 <img src="img/speakers/Michele_Nuijten.jpeg" alt="Michèle Nuijten" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Michèle Nuijten</a></h3>
+                  <h3><a href="speaker_details/sd_MicheleNuijten.html">Michèle Nuijten</a></h3>
                   <p>Tilburg University</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -284,14 +274,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <img src="img/speakers/Ivan_Oransky.jpg" alt="Ivan Oransky" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Ivan Oransky</a></h3>
+                  <h3><a href="speaker_details/sd_IvanOransky.html">Ivan Oransky</a></h3>
                   <p>Retraction Watch</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -299,14 +283,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <img src="img/speakers/Lauran_Qualkenbush.jpg" alt="Lauran Qualkenbush" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Lauran Qualkenbush</a></h3>
+                  <h3><a href="#a">Lauran Qualkenbush</a></h3>
                   <p>Northwestern University</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -314,14 +292,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                 <img src="img/speakers/Corinna_Raimondo.jpg" alt="Corinna Raimondo" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Corinna Raimondo</a></h3>
+                  <h3><a href="#a">Corinna Raimondo</a></h3>
                   <p>Northwestern University</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -329,14 +301,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Walter_Scheirer.jpg" alt="Walter Scheirer" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Walter Scheirer</a></h3>
+                  <h3><a href="#a">Walter Scheirer</a></h3>
                   <p>University of Notre Dame</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -344,14 +310,8 @@
               <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                 <img src="img/speakers/Matthew_Turek.jpeg" alt="Matthew Turek" class="img-fluid">
                 <div class="details">
-                  <h3><a href="#">Matthew Turek</a></h3>
+                  <h3><a href="#a">Matthew Turek</a></h3>
                   <p>DARPA</p>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -359,14 +319,8 @@
                 <div class="speaker aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                   <img src="img/speakers/Debora_Weber_Wulff.jpg" alt="Debora Weber-Wulff" class="img-fluid">
                   <div class="details">
-                    <h3><a href="#">Debora Weber-Wulff</a></h3>
+                    <h3><a href="speaker_details/sd_DeboraWeberWulff.html">Debora Weber-Wulff</a></h3>
                     <p>HTW Berlin - University of Applied Sciences</p>
-                    <div class="social">
-                      <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook"></i></a>
-                      <a href=""><i class="fa fa-google-plus"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a>
-                    </div>
                   </div>
                 </div>
             </div>
@@ -384,9 +338,15 @@
           <h2>Panelists</h2>
           <h3 style="color: #9195a2" class="text-center">(in alphabetical order)</h3>
       </div>
+<<<<<<< HEAD
       <p><strong>IJsbrand Jan Aalbersberg</strong> (Scopus), <strong>Paul Brookes</strong> (University of Rochester), <strong>Jana Christopher</strong> (Image-Integrity),
         <strong>Renee Hoch</strong> (PLOS One), <strong>Wanda Jones</strong> (ORI), <strong>Stephanie Lee</strong> (Buzzfeed), <strong>Benyamin Margolis</strong> (ORI), <strong>Bernd Pulverer</strong> (EMBO),
 	<strong>Maria Kowalczuk</strong> (Springer Nature), <strong>Amit K. Roy-Chowdhury</strong> (UC Riverside), <strong>William C. Trenkle</strong> (USDA), <strong>Richard Van Noorden</strong> (Nature),
+=======
+      <p><strong>IJsbrand Jan Aalbersberg</strong> (Scopus), <strong>Wenda Bauchspies</strong> (NSF), <strong>Erica Boxheimer</strong> (EMBO), <strong>Paul Brookes</strong> (University of Rochester), <strong>Jana Christopher</strong> (Image-Integrity), 
+        <strong>Renee Hoch</strong> (PLOS One), <a class="otherlink" href="panelist_details/pd_WandaJones.html"><strong>Wanda Jones</strong></a> (ORI), <strong>Stephanie Lee</strong> (Buzzfeed), <strong>Benyamin Margolis</strong> (ORI), <strong>Bernd Pulverer</strong> (EMBO), 
+	      <a class="otherlink" href="panelist_details/pd_MariaKowalczuk.html"><strong>Maria Kowalczuk</strong></a> (Springer Nature), <strong>Amit K. Roy-Chowdhury</strong> (UC Riverside), <strong>William C. Trenkle</strong> (USDA), <strong>Richard Van Noorden</strong> (Nature), 
+>>>>>>> master
         <strong>Wouter Vandevelde</strong> (KU Leuven), <strong>Mary Walsh</strong> (Harvard University)</p>
   </div>
 </section>
@@ -436,19 +396,17 @@
               <img src="img/speakers/Ranjini_Ambalavanar2.jpg" alt="Ranjini Ambalavanar">
             </div>
             <h4>Speaker <span>Ranjini Ambalavanar, ORI</span></h4>
-            <p>Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            </p>
-            <div class="zoomLinks">
-              <p>
-                <a id="talk_ranjini" role="button" class="btn btn-sm btn-dark disabled" href="#">
-                  <i class="fa fa-circle"></i>&nbsp; Zoom link
-                </a>
-              </p>
-              <p>
+            <div class="container pt-4 module">
+              <h6><strong>Examining Questioned Data &#8212 Detection Tools and Need for Automation</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Research misconduct in the federal regulation (42 C.F.R. Part 93) means fabrication, falsification, 
+                or plagiarism (FFP) in proposing, performing, or reviewing research, or in reporting research results 
+                (§ 93.103). This session will discuss the types of questioned data and tools that currently are used 
+                to identify and confirm FFP with special emphasis on the need for additional tools and automation. 
+                Examples of different types of falsified/fabricated (FF) data from closed misconduct cases at the 
+                Office of Research Integrity (ORI) and forensic tools used by ORI to detect and confirm intentional 
+                FF will be presented.
+              </div>
             </div>
           </div>
         </div>
@@ -460,19 +418,23 @@
               <img src="img/speakers/Jennifer_Byrne2.png" alt="Jennifer Byrne">
             </div>
             <h4>Speaker <span>Jennifer Byrne, The University of Sydney</span></h4>
-            <p>Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            Facere provident incidunt quos voluptaslksaj klaj dlkj alkj dsaflkjsad lkjfa lkja lkfja
-            </p>
-            <div class="zoomLinks">
-              <p>
-                <a id="talk_byrne" role="button" class="btn btn-sm btn-dark disabled" href="#">
-                  <i class="fa fa-circle"></i>&nbsp; Zoom link
-                </a>
-              </p>
-              <p>
+            <div class="container pt-4 module">
+              <h6><strong>Computational research integrity and cancer research: building tools and narratives to improve the health of the research literature</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Computational research integrity and cancer research are young and old research fields, respectively, 
+                and yet they have much in common. Cancer research involves the discovery of biological features that 
+                reliably distinguish cancer cells from normal cells. These features are targeted by drug developers 
+                to create cancer therapies that are tested by researchers and then applied by clinicians to patients. 
+                Similarly, computational research integrity involves the identification of publication features that 
+                reliably depart from established norms or standards. These features inform the creation of automated 
+                tools that are then tested and applied by researchers and publishers to manuscripts and papers. Based 
+                upon our experience of applying the semi-automated tool Seek &amp; Blastn to the molecular cancer 
+                research literature, we will describe how the skill to employ automated literature screening tools 
+                needs to be matched by the will to apply these tools and then act upon their results. Beyond developing 
+                the skills to apply automated literature screening tools within different user groups, we propose that 
+                achieving the necessary willingness to tackle pervasive research integrity problems will require the 
+                development of positive narratives that speak to shared aspirations and values.
+              </div>
             </div>
           </div>
         </div>
@@ -503,7 +465,22 @@
               <img src="img/speakers/Michele_Nuijten2.jpeg" alt="Michèle Nuijten">
             </div>
             <h4>Speaker <span>Michèle Nuijten, Tilburg University</span></h4>
-            <!-- <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong><em>statcheck</em>: a spellchecker for statistics</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Half of the psychology papers contain inconsistent statistical results in which the reported p&#8209;value 
+                does not match the reported test statistic and degrees of freedom. Most of these inconsistencies seem 
+                to be small and inconsequential, but in over 12.5% of the papers there are inconsistencies that might 
+                change the statistical conclusion. Such statistical reporting inconsistencies affect the reproducibility 
+                and quality of scientific findings.<pre></pre>
+                We developed the R package “<em>statcheck</em>” and the accompanying web app <a href="http://statcheck.io">http://statcheck.io</a> 
+                to automatically find these inconsistencies. In my talk, I will briefly explain how <em>statcheck</em> 
+                works. I will discuss <em>statcheck</em>’s potential in preventing statistical errors through self-checks 
+                and peer review, and discuss how <em>statcheck</em> can be used for meta-research. Furthermore, I will 
+                briefly give an overview of current developments, including a statcheck Word add-in and the implementation 
+                of Natural Language Processing techniques to expand <em>statcheck</em>’s searching algorithm.
+              </div>
+            </div>
           </div>
         </div>
 
@@ -522,7 +499,18 @@
               <img src="img/speakers/Edward_Delp2.jpg" alt="Edward J. Delp">
             </div>
             <h4>Speaker <span>Edward J. Delp, Purdue University</span></h4>
-            <!-- <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>A System for Forensic Analysis of Scientific Images</strong></h6>
+              <div class="addReadMore showlesscontent">
+                In this talk I will describe a system that we are developing for the forensic analysis of images and other 
+                media extracted from a scientific publication. This system uses many modern media forensic methods to 
+                examine images and determine if the image has been likely altered or modified. The tools that are available 
+                include duplication detection, copy/move detection, provenance analysis and media forensics tools. The 
+                current system has methods for extracting images, figures, and captions and maintaining the relative 
+                relationships of the figures in a paper. The system has a simple and intuitive web-based user interface, a 
+                sophisticated database, and is easily extensible using Docker containers.<pre></pre>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -531,7 +519,7 @@
           <div class="col-md-10">
             <h4>Panel <span>Institutional investigators</span></h4>
             <ul>
-              <li>Wanda Jones, ORI (panel chair)</li>
+              <li><a class="otherlink" href="panelist_details/pd_WandaJones.html">Wanda Jones</a>, ORI (panel chair)</li>
               <li>William C. Trenkle, USDA</li>
               <li>Wouter Vandevelde, KU Leuven</li>
               <li>Mary Walsh, Harvard University</li>
@@ -552,11 +540,10 @@
           <div class="col-md-10">
             <h4>Panel <span>Publishers</span></h4>
             <ul>
+              <li>Bernd Pulverer, EMBO (panel chair)</li>
               <li>Renee Hoch, PLOS One</li>
               <li>IJsbrand Jan Aalbersberg, Scopus</li>
-	      <li>Bernd Pulverer, EMBO</li>
-	      <li>Maria Kowalczuk, Springer Nature</li>
-              <li>Daniel Acuna, Syracuse University (moderator only)</li>
+              <li><a class="otherlink" href="panelist_details/pd_MariaKowalczuk.html">Maria Kowalczuk</a>, Springer Nature</li>
             </ul>
           </div>
         </div>
@@ -597,7 +584,21 @@
               <img src="img/speakers/Elisabeth_Bik2.png" alt="Elisabeth Bik">
             </div>
             <h4>Speaker <span>Elisabeth Bik, Harbers-Bik LLC</span></h4>
-            <!-- <p>Facere provident incidunt quos voluptas.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Image duplication detection tools &#8212 insights from a human spotter</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Despite peer-review and editorial screening, science papers can still contain images or other data of concern. 
+                A visual scan of 20,000 papers published in 40 biomedical journals showed that 4% contained inappropriately 
+                duplicated images. Papers containing incorrect or even falsified data could lead to wasted time and money spent 
+                by other researchers trying to reproduce those results. Thorough image screening before publication would be 
+                beneficial for editors, publishers, and readers, and act as a deterrent for fraudulent submissions. There is a 
+                great need for high-throughput computational tools to find image duplications and manipulations in scientific 
+                manuscripts, and to help detect the growing number of fabricated manuscripts produced by paper mills. Elisabeth 
+                Bik will present some case examples, insights, and challenges that she has encountered as a human visual 
+                duplication detector.<br>
+              </div>
+              <!-- <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a> -->
+            </div>
           </div>
         </div>
 
@@ -608,7 +609,24 @@
               <img src="img/speakers/Debora_Weber_Wulff2.jpg" alt="Debora Weber-Wulff">
             </div>
             <h4>Speaker <span>Debora Weber-Wulff, HTW Berlin - University of Applied Sciences</span></h4>
-            <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Responsible Use of Support Tools for Plagiarism Detection</strong></h6>
+              <div class="addReadMore showlesscontent">
+                <div>
+                  Many academic institutions are of the opinion that they can simply solve the problem of plagiarism 
+                  by purchasing the use of so-called plagiarism detection software. But as a recent test of such 
+                  support tools shows, the systems don't find all plagiarism and will report text overlap that is not 
+                  plagiarism as if it were. Institutions that rely only on some similarity measure for determining 
+                  sanctions need to be aware of how meaningless the numbers these systems report are.
+                </div>
+                <div>
+                  In this talk the results of the recent test of support tools for detecting plagiarism conducted by 
+                  the European Network of Academic Integrity will be presented, followed by a discussion of what 
+                  constitutes the responsible use of such tools.
+                </div>
+              </div>
+              <!-- <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a> -->
+            </div>         
           </div>
         </div>
 
@@ -656,6 +674,7 @@
             <h4>Panel <span>Funders</span></h4>
             <ul>
               <li>Benyamin Margolis, ORI (panel chair)</li>
+              <li>Wenda Bauchspies, NSF</li>
               <li>Michael Lauer, NIH</li>
               <li>Matt Turek, DARPA</li>
             </ul>
@@ -737,7 +756,26 @@
               <img src="img/speakers/Walter_Scheirer2.jpg" alt="Walter Scheirer">
             </div>
             <h4>Speaker <span>Walter Scheirer, University of Notre Dame</span></h4>
-            <!-- <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>Understanding the Provenance of Visual Disinformation Targeting Science</strong></h6>
+              <div class="addReadMore showlesscontent">
+                The COVID-19 pandemic has attracted significant attention to scientific matters related to the cause, treatment, 
+                and prevention of the disease that has upended our lives. Alarmingly, not all of the information available on the 
+                Internet is what it appears to be. Deceptive memes, bogus ads, and fabricated infographics are proliferating, with 
+                all threatening to undermine the public's trust in science. Given the vast scale of the problem, an automated 
+                capability that can identify new instances of visual disinformation, trace its origin, and ultimately flag it as 
+                being problematic is needed. But compared to text, visual content presents unique challenges for media forensics. 
+                This talk presents an end-to-end processing pipeline for image provenance analysis, which works at real-world scale. 
+                It employs a cutting-edge image filtering solution that is able to find related images, as well as novel techniques 
+                for obtaining a provenance graph that expresses how the images, as nodes, are ancestrally connected. Building from 
+                provenance analysis, the talk goes on to introduce a scalable automated visual recognition pipeline for discovering 
+                meme genres of diverse appearance. This pipeline can ingest meme images from a social network, apply computer 
+                vision-based techniques to extract features and index new images into a database, and then organize the memes into 
+                related genres. Recent examples of visual disinformation targeting science will be highlighted, including repurposed 
+                imagery, parasitic advertising, and pandemic-related memes. Finally, the talk will conclude with thoughts on continued 
+                research in this direction.<pre></pre>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -786,7 +824,16 @@
               <img src="img/speakers/Ivan_Oransky2.jpg" alt="Ivan Oransky">
             </div>
             <h4>Speaker <span>Ivan Oransky, Retraction Watch</span></h4>
-            <!-- <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p> -->
+            <div class="container pt-4 module">
+              <h6><strong>From Cancer to COVID-19, Does Science Self-Correct?</strong></h6>
+              <div class="addReadMore showlesscontent">
+                Rapid publication of results &#8212; particularly on preprint servers &#8212; has grown dramatically during the COVID-19 pandemic, 
+                and has forced researchers, health care professionals, journalists, and others to grapple with the concept of reliable 
+                and actionable information. The pandemic has given rise to more than 80 retractions at the time of this writing. Is that 
+                cause for concern? My lens for this talk will be ten years of experience reporting on retractions for Retraction Watch, 
+                including creating the world’s most comprehensive database of retractions, with close to 24,000 and counting.<pre></pre>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -814,13 +861,13 @@
         <div class="row schedule-item">
           <div class="col-md-2"><time>03:30 PM</time></div>
           <div class="col-md-10">
-            <h4>Panel <span>Investigators/whisteblowers</span></h4>
+            <h4>Panel <span>Investigators/whistleblowers</span></h4>
             <ul>
-              <li>Elisabeth Bik, Harbers-Bik LLC</li>
+              <li>Paul Brookes, University of Rochester (panel chair)</li>
               <li>Boris Barbour, The PubPeer Foundation</li>
+              <li>Elisabeth Bik, Harbers-Bik LLC</li>
+              <li>Erica Boxheimer, EMBO</li>
               <li>Jana Christopher, Image-Integrity</li>
-              <li>Paul Brookes, University of Rochester</li>
-              <li>Daniel Acuna, Syracuse University (moderator only)</li>
             </ul>
           </div>
         </div>
@@ -967,57 +1014,22 @@
 
     <div class="row no-gutters sponsors-wrap clearfix justify-content-center" data-aos="zoom-in" data-aos-delay="100">
       <div class="col-lg-3 col-md-4 col-xs-6 p-4">
-        <a href="https://retractionwatch.com" title="Retraction Watch"><img src="/img/sponsors/retractionWatch_logo.jpg" class="img-fluid" alt="Retraction Watch"></a>
+        <a href="https://retractionwatch.com" title="Retraction Watch"><img src="/img/sponsors/retractionWatch_logo.jpg" class="img-fluid" alt="Retraction Watch" style="width:200px;height:120px;"></a>
       </div>
       <div class="col-lg-3 col-md-4 col-xs-6 p-4">
-        <a href="https://www.cos.io" title="Center for Open Science"><img src="/img/sponsors/COS_logo.jpg" class="img-fluid" alt="Center for Open Science"></a>
+        <a href="https://www.cos.io" title="Center for Open Science"><img src="/img/sponsors/COS_logo.jpg" class="img-fluid" alt="Center for Open Science" style="width:200px;height:120px;"></a>
+      </div>
+    </div>
+    <div class="row no-gutters sponsors-wrap clearfix justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-lg-3 col-md-4 col-xs-6 p-4">
+        <a href="https://journals.sagepub.com/home/jre" title="Journal of Empirical Research on Human Research Ethics"><img src="/img/sponsors/JERHRE_logo.jpg" class="img-fluid" alt="Journal of Empirical Research on Human Research Ethics" style="width:200px;height:120px;"></a>
       </div>
       <div class="col-lg-3 col-md-4 col-xs-6 p-4">
-        <a href="https://journals.sagepub.com/home/jre" title="Journal of Empirical Research on Human Research Ethics"><img src="/img/sponsors/JERHRE_logo.jpg" class="img-fluid" alt="Journal of Empirical Research on Human Research Ethics"></a>
+        <a href="https://www.springer.com/journal/11948/updates/18892764" title="Science and Engineering Ethics Journal"><img src="/img/sponsors/SEE_Springer.jpg" class="img-fluid" alt="Science and Engineering Ethics Journal" style="width:200px;height:120px;"></a>
       </div>
     </div>
-
-  </div>
-</section><!-- End Media Partners Section -->
-
-  <section class="section-with-bg pb-5">
-  <div class="container">
-
-        <div class="row">
-          <div class="col-2"></div>
-        <div class="col align-self-center">
-      <!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://acuna.us1.list-manage.com/subscribe/post?u=fa232ea75a976a038d26ac610&amp;id=d7f995609b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<h2>Stay up-to-date for this and future events</h2>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address </label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fa232ea75a976a038d26ac610_d7f995609b" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-          </div>
-        <div class="col-2"></div>
-        </div>
   </div>
   </section>
-
 </main>
 
 
@@ -1059,8 +1071,7 @@
 <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
+
 <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="lib/easing/easing.min.js"></script>
 <script src="lib/superfish/hoverIntent.js"></script>
