@@ -1,4 +1,4 @@
-jQuery(document).ready(function( $ ) {
+$(document).ready(function() {
 
   // Back to top button
   $(window).scroll(function() {
@@ -178,15 +178,9 @@ jQuery(document).ready(function( $ ) {
     modal.find('#ticket-type').val(ticketType);
   })
 
-  // Init AOS
-  function aos_init() {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }
+
   $(window).on('load', function() {
-    aos_init();
+    // aos_init();
   });
 
-})(jQuery);
+});
