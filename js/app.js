@@ -5,18 +5,21 @@ authenticate = async () => {
     const response = await fetchAuthConfig();
     const config = await response.json();
 
-    auth0 = await createAuth0Client({
-        domain: config.domain,
-        client_id: config.clientId
-    });
-
     try {
+        auth0 = await createAuth0Client({
+            domain: config.domain,
+            client_id: config.clientId
+        });
         await auth0.getTokenSilently();
     } catch (error) {
         if (error.error !== "login_required") {
-            $("#alert-message").html(error);
+            const href = `https://${config.domain}/v2/logout?` +
+                `client_id=${config.clientId}&` +
+                `returnTo=${window.location.href}`;
+            $("#alert-message").html("<p>" + error + "</p><div>" +
+                `<a href="${href}" class="btn btn-warning">Understood</a></div>`);
             console.log(error);
-            throw error;
+            $("#alert-section").show();
         }
     }
     // await updateUI();
@@ -99,11 +102,18 @@ authenticate = async () => {
 };
 
 const updateUI = async () => {
-    const authenticated = await auth0.isAuthenticated();
+    let authenticated;
+    try {
+        authenticated = await auth0.isAuthenticated();
+    } catch (e) {
+        authenticated = false;
+    }
+
     const login_el = $("#login");
 
     const dt = await $('#talks-table').DataTable();
     let talk_info = {};
+    let zoom_link = "";
 
     if (authenticated) {
         const u = await auth0.getUser()
@@ -114,17 +124,18 @@ const updateUI = async () => {
             });
         });
         const client_info = await auth0.getIdTokenClaims();
-        const talk_list = client_info["https://cri-conf.org/talks"];
-        await talk_list.forEach((e) => {
-            talk_info[e.event_id] = e.url;
-        });
+        zoom_link = client_info["https://cri-conf.org/talks"];
     } else {
         await login_el.html("Login");
-        login_el.click(() => {
-            auth0.loginWithRedirect({
-                redirect_uri: window.location.href,
+        try {
+            login_el.click(() => {
+                auth0.loginWithRedirect({
+                    redirect_uri: window.location.href,
+                });
             });
-        });
+        } catch(e) {
+            login_el.addClass("disabled");
+        }
     }
 
     let slot_information = [];
@@ -172,7 +183,7 @@ const updateUI = async () => {
                     $("#spotlight-info").html(
                         si.row[3]
                     );
-                    $("#spotlight-watch").fadeIn().attr("href", talk_info[si.row.DT_RowId]);
+                    $("#spotlight-watch").fadeIn().attr("href", zoom_link);
                     matched_event = true;
                 }
             }
@@ -225,6 +236,7 @@ const updateUI = async () => {
     }
     login_el.fadeIn();
     $("#main").show();
+    $("#loading").hide();
     $("#spotlight").show();
 }
 

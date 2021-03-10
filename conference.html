@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158260619-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158260619-1');
+  </script>
     <meta charset="utf-8">
-    <title>cri-conf 2021 - Computational Research Integrity Conference</title>
+    <title>cri-conf 2021 - Computational Research Integrity Conference - Schedule</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Computational research integrity, scientific misconduct, research integrity investigations"
           name="keywords">
@@ -43,7 +52,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a href="index.html" class="navbar-brand scrollto"><h1><span>CRI-CONF</span> 2021</h1></a>
+        <a href="index.html" class="navbar-brand scrollto"><h1><span style="color: #D44500">CRI-CONF</span> 2021</h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,6 +77,14 @@
 <!--<section id="intro">-->
 <!--    <div class="intro-container wow fadeIn">-->
 <div id="spotlight" class="container-fluid pt-2 pb-4" style="background: #0e1b4d; display: none">
+    <div id="alert-section" class="col-4 mx-auto" style="display: none">
+            <div class="alert alert-warning alert-dismissible fade show align-self-center" role="alert">
+                <div id="alert-message"></div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+    </div>
     <div class="col-xl-8 col-md-10 col-sm-12 mx-auto">
         <div id="spotlight-card" class="card px-4 pt-4 pb-4 mx-auto mt-5">
             <div class="row">
@@ -1033,8 +1050,13 @@
         </div>
     </section>
 </main>
-<div class="text-center" style="height: 100%">
-    <div class="spinner-border align-middle" role="status">
+<div id="loading" class="text-center" style="height: 100%; position: fixed;
+width: 100%;
+height:100%;
+display: flex;
+align-items: center;
+top: 0;">
+    <div class="spinner-grow" role="status" style="display: flex; margin: 0 auto">
         <span class="sr-only">Loading...</span>
     </div>
 </div>
