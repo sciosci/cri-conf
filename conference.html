@@ -14,10 +14,6 @@
     and systematic with the use of computational methods."
           name="description">
 
-    <!-- Favicons -->
-    <!--    <link href="img/favicon.png" rel="icon">-->
-    <!--    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">-->
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
           rel="stylesheet">
@@ -38,15 +34,6 @@
     <link href="lib/venobox/venobox.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Main Stylesheet File -->
-    <!--        <link href="css/style.css" rel="stylesheet">-->
-
-    <!-- =======================================================
-      Theme Name: TheEvent
-      Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-      Author: BootstrapMade.com
-      License: https://bootstrapmade.com/license/
-    ======================================================= -->
 </head>
 <body>
 
@@ -101,27 +88,11 @@
         display: none;
     }
 
-    .blink {
-        animation: blinker 0.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;
-    }
-
-    @keyframes blinker {
-        from {
-            opacity: 1;
-            size: 110%
-        }
-        to {
-            opacity: 0.5;
-            size: 50%
-        }
-    }
-
-
     div.container {
         max-width: 1200px
     }
 
-    name {
+    .name {
         font-weight: 800;
     }
 
@@ -136,8 +107,8 @@
 </style>
 <main id="main" style="display: none">
     <section id="talks" class="pt-4 pb-4 px-4">
-        <div class="container pt-4 pb-4" style="box-shadow: 3px 3px 20px rgb(0 0 0 / 30%);">
-            <table id="talks-table" class="table responsive table-striped table-bordered" width="100%">
+        <div class="container pt-4 pb-4" style="box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);">
+            <table id="talks-table" class="table responsive table-striped table-bordered" style="width: 100%">
                 <thead>
                 <tr>
                     <th scope="col">Day</th>
@@ -155,17 +126,17 @@
                     <td>9:00 AM</td>
                     <td>
                         <div>
-                            <name>Daniel Acuna</name>
+                            <span class="name">Daniel Acuna</span>
                             <small>Syracuse University</small></div>
                         <div>
-                            <name>Benyamin Margolis</name>
+                            <span class="name">Benyamin Margolis</span>
                             <small>Health Scientist Administrator,
                                 Division of Education and Integrity,
                                 Office of Research Integrity, OASH/OS/HHS</small>
                         </div>
                     </td>
                     <td>
-                        <em>Welcome & remarks</em>
+                        <em>Welcome and remarks</em>
                         <p>
                         </p>
                     </td>
@@ -177,7 +148,7 @@
                     <td>2021-03-23</td>
                     <td>9:15 AM</td>
                     <td>
-                        <name>Ranjini Ambalavanar</name>
+                        <span class="name">Ranjini Ambalavanar</span>
                         ,
                         <small>Acting Director of the Division of Investigative Oversight (DIO),
                             Office of Research Integrity (ORI)</small>
@@ -198,13 +169,13 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="talk_byrne">
                     <td>2021-03-23</td>
                     <td>10:00 AM</td>
                     <td>
-                        <name>Jennifer Byrne</name>
+                        <span class="name">Jennifer Byrne</span>
                         <small>
                             Director of Biobanking, NSW Health Pathology,
                             Professor of Molecular Oncology,
@@ -225,7 +196,7 @@
                             involves the identification of publication features that reliably depart from established
                             norms or standards. These features inform the creation of automated tools that are then
                             tested and applied by researchers and publishers to manuscripts and papers. Based upon our
-                            experience of applying the semi-automated tool Seek & Blastn to the molecular cancer
+                            experience of applying the semi-automated tool Seek &amp; Blastn to the molecular cancer
                             research literature, we will describe how the skill to employ automated literature screening
                             tools needs to be matched by the will to apply these tools and then act upon their results.
                             Beyond developing the skills to apply automated literature screening tools within different
@@ -236,7 +207,7 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day1_break1">
                     <td>2021-03-23</td>
@@ -255,13 +226,13 @@
                     <td>11:00 AM</td>
                     <td>
                         <div>
-                            <name>Lauran Qualkenbush</name>
+                            <span class="name">Lauran Qualkenbush</span>
                             <small>
                                 Director, Office for Research Integrity at Northwestern University
                             </small>
                         </div>
                         <div>
-                            <name>Corinna Raimondo</name>
+                            <span class="name">Corinna Raimondo</span>
                             <small>
                                 Senior Compliance Specialist, Office for Research Integrity, Northwestern University
                             </small>
@@ -272,13 +243,13 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="talk_nuijten">
                     <td>2021-03-23</td>
                     <td>11:45 AM</td>
                     <td>
-                        <name>Michèle Nuijten</name>
+                        <span class="name">Michèle Nuijten</span>
                         <small>
                             Assistant Professor at Tilburg University
                         </small>
@@ -302,7 +273,7 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day1_presentations">
                     <td>2021-03-23</td>
@@ -310,17 +281,28 @@
                     <td>
                     </td>
                     <td>
-                        Contributed presentations
+                        <h5>Contributed presentations</h5>
+                        <p>12:30 PM - 12:50 PM:<br><em>Ghazal Mazaheri, Kevin Urrutia Avila and Amit K.
+                            Roy-Chowdhury</em>,
+                            "Learning to Identify
+                            Image Duplications in Scientific Publications"
+                        <a href="pdfs/CRI-CONF_2021_paper_1.pdf"><i class="fa fa-file-pdf-o"></i></a>
+                        </p>
+                        <p>12:55 PM - 1:15 PM:<br><em>Kyle Siler, Philippe Vincent-Lamarre, Cassidy R. Sugimoto and
+                            Vincent
+                            Larivière</em>, "The Lacuna Database: Empirical Data to Identify Obscure, Unconventional,
+                            Questionable and/or Predatory Journals"
+                        <a href="pdfs/CRI-CONF_2021_paper_2.pdf"><i class="fa fa-file-pdf-o"></i></a></p>
                     </td>
                     <td>
                     </td>
-                    <td></td>
+                    <td>Contributed Presentations</td>
                 </tr>
                 <tr id="talk_delp">
                     <td>2021-03-23</td>
-                    <td>11:45 AM</td>
+                    <td>01:30 PM</td>
                     <td>
-                        <name>Edward J. Delp</name>
+                        <span class="name">Edward J. Delp</span>
                         <small>
                             The Charles William Harrison Distinguished Professor of Electrical and Computer Engineering
                             at Purdue University
@@ -342,36 +324,43 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="panel_institutional_investigators">
                     <td>2021-03-23</td>
                     <td>02:15 PM</td>
                     <td>
-                        Panel
+                        <div>
+                            <span class="name">Wanda Jones</span>
+                            (Panel chair)
+                            <small>Associate Director for Research and Scientific Integrity, Deputy Director, Office of
+                                Research Integrity, HHS, Office of the Assistant Secretary for Health </small>
+                        </div>
+                        <div>
+                            <span class="name">William C. Trenkle</span>
+                            <small> Senior Advisor for Scientific Integrity, USDA</small>
+                        </div>
+                        <div>
+                            <span class="name">Wouter Vandevelde</span>
+                            <small>Advisor Research Integrity &amp; Ethics, KU Leuven</small>
+                        </div>
+                        <div>
+                            <span class="name">Mary Walsh</span>
+                            <small>Chief Scientific Investigator, Office for Academic and Research Integrity, Harvard
+                                Medical School</small>
+                        </div>
                     </td>
                     <td>
-                        <em>Institutional investigators</em>
-                        <ul>
-                            <li>
-                                <name>Wanda Jones</name>
-                                , ORI (Panel chair)
-                            </li>
-                            <li>
-                                <name>William C. Trenkle</name>
-                                , USDA
-                            </li>
-                            <li>
-                                <name>Wouter Vandevelde</name>
-                                , KU Leuven
-                            </li>
-                            <li>
-                                <name>Mary Walsh</name>
-                                , Harvard University
-                            </li>
-                        </ul>
-                        <div>
-                        </div>
+                        <h5><strong>Panel:</strong> Institutional investigators</h5>
+                        <p>
+                            Institutional investigations are many times the first places where systematic problems are
+                            investigated. In many cases, these are the places where investigations are most
+                            consequential because they carry with them the potential for disrupting funding,
+                            collaboration networks, and labs. We hope to exchange ideas about how these institutional
+                            investigations work from the inside—not often understood from the outside. The panelists
+                            will discuss the kinds of issues and challenges they most often find. They will also discuss
+                            the role that technology could play in their work.
+                        </p>
                     </td>
                     <td>
                     </td>
@@ -393,31 +382,33 @@
                     <td>2021-03-23</td>
                     <td>03:30 PM</td>
                     <td>
-                        Panel
+                        <div>
+                            <span class="name">Bernd Pulverer</span>
+                            (Panel chair)
+                            <small>Chief Editor, EMBO Press</small>
+                        </div>
+                        <div>
+                            <span class="name">Renee Hoch</span>
+                            <small>Publication Ethics, PLOS ONE</small>
+                        </div>
+                        <div>
+                            <span class="name">IJsbrand Jan Aalbersberg</span>
+                            <small>Senior Vice President of Research Integrity, Elsevier</small>
+                        </div>
+                        <div>
+                            <span class="name">Maria Kowalczuk</span>
+                            <small>Research Integrity Manager, Springer Nature</small>
+                        </div>
                     </td>
                     <td>
-                        <em>Institutional investigators</em>
-                        <ul>
-                            <li>
-                                <name>Bernd Pulverer</name>
-                                (Panel chair)
-                                , EMBO
-                            </li>
-                            <li>
-                                <name>Renee Hoch</name>
-                                , PLoS ONE
-                            </li>
-                            <li>
-                                <name>IJsbrand Jan Aalbersberg</name>
-                                , Scopus
-                            </li>
-                            <li>
-                                <name>Maria Kowalczuk</name>
-                                , Springer Nature
-                            </li>
-                        </ul>
-                        <div>
-                        </div>
+                        <h5><strong>Panel:</strong> Publishers</h5>
+                        <p>
+                            Publishers play a crucial role as the last line of defense against scientific error and
+                            potential misconduct. This panel will discuss the role publishers have in deterring and
+                            detecting potential issues. They may also discuss how they seek clarification from authors,
+                            corrections, or retractions. This panel will discuss the role that human investigators play
+                            and the tools they use or do not use.
+                        </p>
                     </td>
                     <td>
                     </td>
@@ -439,7 +430,7 @@
                     <td>2021-03-23</td>
                     <td>4:45 PM</td>
                     <td>
-                        <name>Daniel Acuna</name>
+                        <span class="name">Daniel Acuna</span>
                         <small>Syracuse University</small>
                     </td>
                     <td>
@@ -468,10 +459,8 @@
                     <td>2021-03-24</td>
                     <td>9:00 AM</td>
                     <td>
-                        <name>Daniel Acuna</name>
+                        <span class="name">Daniel Acuna</span>
                         <small>Syracuse University</small>
-                        <name>Benyamin Margolis</name>
-                        <small>ORI</small>
                     </td>
                     <td>
                         <em>Short remarks</em>
@@ -486,7 +475,7 @@
                     <td>2021-03-24</td>
                     <td>9:05 AM</td>
                     <td>
-                        <name>Elisabeth Bik</name>
+                        <span class="name">Elisabeth Bik</span>
                         <small>Harbers-Bik LLC</small>
                     </td>
                     <td>
@@ -508,13 +497,13 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="talk_weber">
                     <td>2021-03-24</td>
                     <td>10:00 AM</td>
                     <td>
-                        <name>Debora Weber-Wulff</name>
+                        <span class="name">Debora Weber-Wulff</span>
                         <small>
                             Professor for Media and Computing at the HTW Berlin
                         </small>
@@ -535,7 +524,7 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day2_break1">
                     <td>2021-03-24</td>
@@ -553,7 +542,7 @@
                     <td>2021-03-24</td>
                     <td>11:00 AM</td>
                     <td>
-                        <name>Michael Lauer</name>
+                        <span class="name">Michael Lauer</span>
                         <small>
                             Deputy Director for Extramural Research at the National Institutes of Health (NIH)
                         </small>
@@ -563,13 +552,13 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="talk_turek">
                     <td>2021-03-24</td>
                     <td>11:45 AM</td>
                     <td>
-                        <name>Matt Turek</name>
+                        <span class="name">Matt Turek</span>
                         <small>
                             Information Innovation Office (I2O), Program Manager, DARPA
                         </small>
@@ -578,14 +567,8 @@
                         TBA
                     </td>
                     <td>
-                        <div class="zoomLinks">
-                            <a role="button" class="btn btn-sm btn-dark disabled"
-                               href="#">
-                                <i class="testclass fa fa-circle"></i>&nbsp; Open Zoom
-                            </a>
-                        </div>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day2_presentations">
                     <td>2021-03-24</td>
@@ -593,42 +576,62 @@
                     <td>
                     </td>
                     <td>
-                        Contributed presentations
+                        <h5>Contributed presentations</h5>
+                        <p>12:30 PM - 12:50 PM:<br><em>Zubair Afzal, Marleen Sta, Marialaura Martinico, Daniel Gregory,
+                            Lekhraj Sharma, Ramsundhar Baskaravelu and George Tsatsaronis</em>,
+                            "Improving reproducibility by automating key resource tables"
+                            <a href="pdfs/CRI-CONF_2021_paper_3.pdf"><i class="fa fa-file-pdf-o"></i></a>
+                        </p>
+                        <p>12:55 PM - 1:15 PM:<br><em>Colby Vorland, David Allison and Andrew Brown</em>,
+                            "Semi-automated
+                            Screening for Improbable Randomization in PDFs"
+                            <a href="pdfs/CRI-CONF_2021_paper_5.pdf"><i class="fa fa-file-pdf-o"></i></a>
+                        </p>
                     </td>
                     <td>
                     </td>
-                    <td></td>
+                    <td>Contributed Presentations</td>
                 </tr>
                 <tr id="panel_funders">
                     <td>2021-03-24</td>
                     <td>01:30 PM</td>
                     <td>
-                        Panel
-                    </td>
-                    <td>
-                        <em>Funders</em>
-                        <ul>
-                            <li>
-                                <name>Benyamin Margolis</name>
-                                , ORI (Panel chair)
-                            </li>
-                            <li>
-                                <name>Michael Lauer</name>
-                                , NIH
-                            </li>
-                            <li>
-                                <name>Matt Turek</name>
-                                , DARPA
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <div class="zoomLinks">
-                            <a role="button" class="btn btn-sm btn-dark disabled"
-                               href="#">
-                                <i class="testclass fa fa-circle"></i>&nbsp; Open Zoom
-                            </a>
+                        <div>
+                            <span class="name">Benyamin Margolis</span>
+                            (Panel chair)
+                            <small>Information Innovation Office (I2O), Program Manager, DARPA</small>
                         </div>
+                        <div>
+                            <span class="name">Wenda Bauchspies</span>
+                            <small>Program Director, Ethical and Responsible Research (ER2) and
+                                Science and Technology Studies (STS), NSF</small>
+                        </div>
+                        <div>
+                            <span class="name">Michael Lauer</span>
+                            <small>Deputy Director for Extramural Research at the National Institutes of Health (NIH)
+                            </small>
+                        </div>
+                        <div>
+                            <span class="name">Matt Turek</span>
+                            <small>Information Innovation Office (I2O), Program Manager, DARPA</small>
+                        </div>
+                    </td>
+                    <td>
+                        <h5><strong>Panel:</strong> Funders</h5>
+                        <p>
+                            This panel will provide a funder’s perspective on research integrity. One view is on the
+                            investigative role of research integrity issues. The panel may discuss how they investigate
+                            research integrity problems within their organization or organizations they oversee. Cases
+                            of scientific errors or misconduct not only severely impact science but also might produce
+                            significant losses to the funder. Some funders engage in direct research efforts to
+                            understand research misconduct and educate scientists and institutions about it. Other
+                            funders see research integrity and forensic science in general as a more fundamental
+                            long-term threat to the foundations of science and even as a tool used by adversaries. In
+                            this sense, research integrity applications go beyond scientific research and might
+                            percolate into other society areas, such as fake news generation and deception capabilities.
+                        </p>
+                    </td>
+                    <td>
                     </td>
                     <td>Panel</td>
                 </tr>
@@ -636,13 +639,14 @@
                     <td>2021-03-24</td>
                     <td>02:40 PM</td>
                     <td>
-                        <name>Daniel Acuna</name>
+                        <span class="name">Daniel Acuna</span>
                         <small>
                             Syracuse University
                         </small>
                     </td>
                     <td>
-                        <h5>Artificial Intelligence for Computational Research Integrity</h5>
+                        <h5><strong>Competition launch:</strong> Artificial Intelligence for Computational Research
+                            Integrity</h5>
                         <p>
                             Numerous cases of scientific mistakes or even misconduct frequently appear in the media.
                             Scientists, publishers, and institutions care about these issues but are overwhelmed by the
@@ -661,7 +665,7 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day2_break2">
                     <td>2021-03-24</td>
@@ -679,24 +683,30 @@
                     <td>2021-03-24</td>
                     <td>03:30 PM</td>
                     <td>
-                        Panel
+                        <div>
+                            <span class="name">Daniel Acuna</span>
+                            (Panel chair)
+                            <small>Syracuse University</small>
+                        </div>
+                        <div>
+                            <span class="name">Jennifer Byrne</span>
+                            <small>The University of Sydney</small>
+                        </div>
+                        <div>
+                            <span class="name">Amit K. Roy-Chowdhury</span>
+                            <small>UC, Riverside</small>
+                        </div>
                     </td>
                     <td>
-                        <em>Tool Developers</em>
-                        <ul>
-                            <li>
-                                <name>Daniel Acuna</name>
-                                , Syracuse University
-                            </li>
-                            <li>
-                                <name>Jennifer Byrne</name>
-                                , The University of Sydney
-                            </li>
-                            <li>
-                                <name>Amit K. Roy-Chowdhury</name>
-                                , UC Riverside
-                            </li>
-                        </ul>
+                        <h5><strong>Panel:</strong> Tool Developers</h5>
+                        <p>
+                            One concrete result of computational approaches in research integrity will depend on the
+                            development of tools. We all have become used to text plagiarism detection, but researchers
+                            could significantly expand these kinds of tools to other media modalities. This panel has
+                            experts who have identified errors and potential misconduct in images, genetic sequences,
+                            and statistical data. This panel will discuss current challenges and opportunities in tool
+                            development, especially regarding why we do not use them more widely and what's missing.
+                        </p>
                     </td>
                     <td>
                     </td>
@@ -718,7 +728,7 @@
                     <td>2021-03-24</td>
                     <td>04:45 PM</td>
                     <td>
-                        Daniel Acuna
+                        <span class="name">Daniel Acuna</span>
                         <small>Syracuse University</small>
                     </td>
                     <td>
@@ -761,7 +771,7 @@
                     <td>2021-03-25</td>
                     <td>9:15 AM</td>
                     <td>
-                        <name>Boris Barbour</name>
+                        <span class="name">Boris Barbour</span>
                         <small>The PubPeer Foundation</small>
                     </td>
                     <td>
@@ -769,13 +779,13 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="talk_scheirer">
                     <td>2021-03-25</td>
                     <td>10:00 AM</td>
                     <td>
-                        <name>Walter Scheirer</name>
+                        <span class="name">Walter Scheirer</span>
                         <small>
                             University of Notre Dame
                         </small>
@@ -806,7 +816,7 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day3_break1">
                     <td>2021-03-25</td>
@@ -824,7 +834,7 @@
                     <td>2021-03-25</td>
                     <td>11:00 AM</td>
                     <td>
-                        <name>Mario Biagioli</name>
+                        <span class="name">Mario Biagioli</span>
                         <small>
                             Distinguished Professor of Law and Communication
                         </small>
@@ -834,13 +844,13 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="talk_beck">
                     <td>2021-03-25</td>
                     <td>11:45 AM</td>
                     <td>
-                        <name>Thorsten Beck</name>
+                        <span class="name">Thorsten Beck</span>
                         <small>
                             HEADT Centre - Humboldt University of Berlin
                         </small>
@@ -850,7 +860,7 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="day3_presentations">
                     <td>2021-03-25</td>
@@ -858,17 +868,23 @@
                     <td>
                     </td>
                     <td>
-                        Contributed presentations
+                        <h5>Contributed presentations</h5>
+                        <p>12:30 PM - 12:50 PM:<br><em>Yury Kashnitsky, Vaishnavi Kandala, Egbert Wezenbeek Van,
+                            Ijsbrand
+                            Jan Aalbersberg, Catriona Fennell and Georgios Tsatsaronis</em>,
+                            "How near-duplicate detection improves editors' and authors' publishing experience"
+                            <a href="pdfs/CRI-CONF_2021_paper_4.pdf"><i class="fa fa-file-pdf-o"></i></a>
+                        </p>
                     </td>
                     <td>
                     </td>
-                    <td></td>
+                    <td>Contributed Presentations</td>
                 </tr>
                 <tr id="talk_oransky">
                     <td>2021-03-25</td>
                     <td>01:30 PM</td>
                     <td>
-                        <name>Ivan Oransky</name>
+                        <span class="name">Ivan Oransky</span>
                         <small>
                             Retraction Watch
                         </small>
@@ -887,34 +903,39 @@
                     </td>
                     <td>
                     </td>
-                    <td>Presentation</td>
+                    <td>Invited Presentation</td>
                 </tr>
                 <tr id="panel_journalists">
                     <td>2021-03-25</td>
                     <td>02:15 PM</td>
                     <td>
-                        Panel
+                        <div>
+                            <span class="name">Ivan Oransky</span>
+                            <small>Retraction Watch</small>
+                        </div>
+                        <div>
+                            <span class="name">Richard Van Noorden</span>
+                            <small>Nature</small>
+                        </div>
+                        <div>
+                            <span class="name">Stephanie Lee</span>
+                            <small>Buzzfeed</small>
+                        </div>
+                        <div>
+                            <span class="name">Daniel Acuna</span>
+                            <small>(moderator only) Syracuse University</small>
+                        </div>
                     </td>
                     <td>
-                        <em>Funders</em>
-                        <ul>
-                            <li>
-                                <name>Stephanie Lee</name>
-                                , Buzzfeed
-                            </li>
-                            <li>
-                                <name>Ivan Oransky</name>
-                                , Retraction Watch
-                            </li>
-                            <li>
-                                <name>Richard Van Noorden</name>
-                                , Nature
-                            </li>
-                            <li>
-                                <name>Daniel Acuna</name>
-                                , Syracuse University (moderator only)
-                            </li>
-                        </ul>
+                        <h5><strong>Panel:</strong> Journalists</h5>
+                        <p>
+                            Journalists have uncovered many scientific integrity cases that have helped us understand
+                            the extent and gravity of research misconduct. The website Retraction Watch and PubPeer have
+                            become the place where these investigations are heavily discussed, and evidence presented.
+                            They have provided invaluable tools to the scientific community—without much official
+                            recognition. This panel discusses journalism's role in research integrity and how tools may
+                            help their investigations.
+                        </p>
                     </td>
                     <td>
                     </td>
@@ -936,29 +957,33 @@
                     <td>2021-03-25</td>
                     <td>03:30 PM</td>
                     <td>
-                        Panel
+                        <div>
+                            <span class="name">Paul Brookes</span>
+                            (Panel chair)
+                            , University of Rochester
+                        </div>
+                        <div>
+                            <span class="name">Elisabeth Bik</span>
+                            , Harbers-Bik LLC
+                        </div>
+                        <div>
+                            <span class="name">Boris Barbour</span>
+                            , The PubPeer Foundation
+                        </div>
+                        <div>
+                            <span class="name">Jana Christopher</span>
+                            , Image-Integrity
+                        </div>
                     </td>
                     <td>
-                        <em>Investigators/whistleblowers</em>
-                        <ul>
-                            <li>
-                                <name>Paul Brookes</name>
-                                (Panel chair)
-                                , University of Rochester
-                            </li>
-                            <li>
-                                <name>Elisabeth Bik</name>
-                                , Harbers-Bik LLC
-                            </li>
-                            <li>
-                                <name>Boris Barbour</name>
-                                , The PubPeer Foundation
-                            </li>
-                            <li>
-                                <name>Jana Christopher</name>
-                                , Image-Integrity
-                            </li>
-                        </ul>
+                        <h5><strong>Panel:</strong> Investigators/whistleblowers</h5>
+                        <p>
+                            There is no doubt that the whistleblower and private investigators' role has become
+                            increasingly crucial for vetting and correcting scientific research. In this panel, the
+                            members will discuss their role in research integrity, their motivations, approaches, and
+                            threats they face. The panel may also discuss how bad actors are adapting and creating new
+                            types of misconduct that are becoming impossible to catch on time or entirely invisible.
+                        </p>
                     </td>
                     <td>
                     </td>
@@ -1038,7 +1063,7 @@
 <script src="js/app.js"></script>
 <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
-<script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+<script src="https://cdn.datatables.net/searchpanes/1.2.2/js/dataTables.searchPanes.min.js"></script>
 <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
 

@@ -26,67 +26,67 @@ authenticate = async () => {
         }
     }
     let unique_speakers = new Set();
-    await $("name").each((i, e) => {
+    await $("span.name").each((i, e) => {
         unique_speakers.add(e.innerHTML);
     });
-    unique_speakers.delete("Daniel Acuna");
     let speaker_options = [];
     await unique_speakers.forEach((lab) => speaker_options.push({
         label: lab,
         value: function (rowData, rowIdx) {
-            return (rowData[2].includes(lab) || rowData[3].includes(lab))
+            return (rowData[2].includes("<span class=\"name\">" + lab + "</span>"))
         }
-    }))
+    }));
 
-
-    $("#talks-table").ready(() => {
-        $('#talks-table').DataTable({
-            paging: false,
-            ordering: false,
-            info: true,
-            order: [[0, 'desc']],
-            rowGroup: {
-                dataSrc: 0,
-                startRender: function (rows, group) {
-                    return $.fn.dataTable.render.moment('dddd, MMMM D, YYYY')(group)
-                }
-            },
-            columnDefs: [
-                {
-                    targets: [0, 4, 5],
-                    visible: false
-                },
-                {
-                    width: "10%",
-                    targets: 1
-                },
-                {
-                    width: "30%",
-                    targets: 2,
-                },
-                {
-                    searchPanes: {
-                        options: speaker_options,
-                    },
-                    targets: [2]
-
-                },
-                {
-                    render: $.fn.dataTable.render.moment('dddd MMMM D'),
-                    targets: [0]
-                }
-            ],
-            // deferRender: true,
-            initComplete: updateUI,
-            autoWidth: false,
-            dom: 'Plfrtip',
-            searchPanes: {
-                layout: 'columns-3',
-                columns: [0, 5, 2],
-                cascadePanes: true,
+    $('#talks-table').DataTable({
+        paging: false,
+        ordering: false,
+        info: true,
+        order: [[0, 'desc']],
+        rowGroup: {
+            dataSrc: 0,
+            startRender: function (rows, group) {
+                return $.fn.dataTable.render.moment('dddd, MMMM D, YYYY')(group)
             }
-        });
+        },
+        columnDefs: [
+            {
+                targets: [0, 4, 5],
+                visible: false
+            },
+            {
+                width: "10%",
+                targets: 1
+            },
+            {
+                width: "30%",
+                targets: 2,
+            },
+            {
+                searchPanes: {
+                    options: speaker_options,
+                    header: "Presenter"
+                },
+                targets: [1]
+            },
+            {
+                render: $.fn.dataTable.render.moment('dddd MMMM D'),
+                targets: [0]
+            }
+        ],
+        // deferRender: true,
+        initComplete: updateUI,
+        autoWidth: false,
+        dom: 'Plfrtip',
+        searchPanes: {
+            layout: 'columns-3',
+            columns: [0, 5, 1],
+            cascadePanes: true,
+        }
     });
+
+    // $("#talks-table").ready(() => {
+    //
+    // });
     // NEW - check for the code and state parameters
     const query = window.location.search;
     if (query.includes("code=") && query.includes("state=")) {
