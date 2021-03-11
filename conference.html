@@ -3,14 +3,18 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158260619-1"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158260619-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-158260619-1');
-  </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158260619-1');
+    </script>
     <meta charset="utf-8">
     <title>cri-conf 2021 - Computational Research Integrity Conference - Schedule</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -30,11 +34,11 @@
     <!-- Bootstrap CSS File -->
     <!--    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/select/1.3.2/css/select.dataTables.min.css" rel="stylesheet">
 
 
     <!-- Libraries CSS Files -->
@@ -52,7 +56,8 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a href="index.html" class="navbar-brand scrollto"><h1><span style="color: #D44500">CRI-CONF</span> 2021</h1></a>
+        <a href="index.html" class="navbar-brand scrollto"><h1><span style="color: #D44500">CRI-CONF</span> 2021</h1>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -78,12 +83,12 @@
 <!--    <div class="intro-container wow fadeIn">-->
 <div id="spotlight" class="container-fluid pt-2 pb-4" style="background: #0e1b4d; display: none">
     <div id="alert-section" class="col-4 mx-auto" style="display: none">
-            <div class="alert alert-warning alert-dismissible fade show align-self-center" role="alert">
-                <div id="alert-message"></div>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+        <div class="alert alert-danger alert-dismissible fade show align-self-center" role="alert">
+            <div id="alert-message"></div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
     <div class="col-xl-8 col-md-10 col-sm-12 mx-auto">
         <div id="spotlight-card" class="card px-4 pt-4 pb-4 mx-auto mt-5">
@@ -96,7 +101,7 @@
             <h6 id="spotlight-title"></h6>
             <p id="spotlight-info">
             </p>
-            <button id="spotlight-watch" class="btn btn-dark mb-2" style="display: none"><span>Watch</span></button>
+            <a id="spotlight-watch" class="btn btn-light mb-2" style="display: none">Watch</a>
         </div>
     </div>
 </div>
@@ -125,932 +130,1036 @@
 <main id="main" style="display: none">
     <section id="talks" class="pt-4 pb-4 px-4">
         <div class="container pt-4 pb-4" style="box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);">
-            <table id="talks-table" class="table responsive table-striped table-bordered" style="width: 100%">
-                <thead>
-                <tr>
-                    <th scope="col">Day</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Presenter</th>
-                    <th scope="col">Event information</th>
-                    <th scope="col">Watch</th>
-                    <th scope="col">Type</th>
-                </tr>
-                </thead>
-                <tbody>
-                <!--  Day 1   -->
-                <tr id="day1_welcome">
-                    <td>2021-03-23</td>
-                    <td>09:00 AM</td>
-                    <td>
-                        <div>
-                            <span class="name">Daniel Acuna</span>
-                            <small>Syracuse University</small></div>
-                        <div>
-                            <span class="name">Benyamin Margolis</span>
-                            <small>Health Scientist Administrator,
-                                Division of Education and Integrity,
-                                Office of Research Integrity, OASH/OS/HHS</small>
-                        </div>
-                    </td>
-                    <td>
-                        <em>Welcome and remarks</em>
-                        <p>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="talk_ambalavanar">
-                    <td>2021-03-23</td>
-                    <td>09:15 AM</td>
-                    <td>
-                        <span class="name">Ranjini Ambalavanar</span>
-                        ,
-                        <small>Acting Director of the Division of Investigative Oversight (DIO),
-                            Office of Research Integrity (ORI)</small>
-                    </td>
-                    <td>
-                        <h5>Examining Questioned Data — Detection Tools and Need for Automation
-                        </h5>
-                        <p>
-                            Research misconduct in the federal regulation (42 C.F.R. Part 93) means fabrication,
-                            falsification, or plagiarism (FFP) in proposing, performing, or reviewing research, or in
-                            reporting research results (§ 93.103). This session will discuss the types of questioned
-                            data and tools that currently are used to identify and confirm FFP with special emphasis on
-                            the need for additional tools and automation. Examples of different types of
-                            falsified/fabricated (FF) data from closed misconduct cases at the Office of Research
-                            Integrity (ORI) and forensic tools used by ORI to detect and confirm intentional FF will be
-                            presented.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="talk_byrne">
-                    <td>2021-03-23</td>
-                    <td>10:00 AM</td>
-                    <td>
-                        <span class="name">Jennifer Byrne</span>
-                        <small>
-                            Director of Biobanking, NSW Health Pathology,
-                            Professor of Molecular Oncology,
-                            School of Medical Sciences,
-                            Faculty of Medicine and Health
-                        </small>
-                    </td>
-                    <td>
-                        <h5>Computational research integrity and cancer research: building tools and narratives to
-                            improve the health of the research literature
-                        </h5>
-                        <p>
-                            Computational research integrity and cancer research are young and old research fields,
-                            respectively, and yet they have much in common. Cancer research involves the discovery of
-                            biological features that reliably distinguish cancer cells from normal cells. These features
-                            are targeted by drug developers to create cancer therapies that are tested by researchers
-                            and then applied by clinicians to patients. Similarly, computational research integrity
-                            involves the identification of publication features that reliably depart from established
-                            norms or standards. These features inform the creation of automated tools that are then
-                            tested and applied by researchers and publishers to manuscripts and papers. Based upon our
-                            experience of applying the semi-automated tool Seek &amp; Blastn to the molecular cancer
-                            research literature, we will describe how the skill to employ automated literature screening
-                            tools needs to be matched by the will to apply these tools and then act upon their results.
-                            Beyond developing the skills to apply automated literature screening tools within different
-                            user groups, we propose that achieving the necessary willingness to tackle pervasive
-                            research integrity problems will require the development of positive narratives that speak
-                            to shared aspirations and values.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day1_break1">
-                    <td>2021-03-23</td>
-                    <td>10:45 AM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="talk_qualkenbush_raimondo">
-                    <td>2021-03-23</td>
-                    <td>11:00 AM</td>
-                    <td>
-                        <div>
-                            <span class="name">Lauran Qualkenbush</span>
-                            <small>
-                                Director, Office for Research Integrity at Northwestern University
-                            </small>
-                        </div>
-                        <div>
-                            <span class="name">Corinna Raimondo</span>
-                            <small>
-                                Senior Compliance Specialist, Office for Research Integrity, Northwestern University
-                            </small>
-                        </div>
-                    </td>
-                    <td>
-                        TBA
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="talk_nuijten">
-                    <td>2021-03-23</td>
-                    <td>11:45 AM</td>
-                    <td>
-                        <span class="name">Michèle Nuijten</span>
-                        <small>
-                            Assistant Professor at Tilburg University
-                        </small>
-                    </td>
-                    <td>
-                        <h5>statcheck: a spellchecker for statistics</h5>
-                        <p>
-                            Half of the psychology papers contain inconsistent statistical results in which the reported
-                            p‑value does not match the reported test statistic and degrees of freedom. Most of these
-                            inconsistencies seem to be small and inconsequential, but in over 12.5% of the papers there
-                            are inconsistencies that might change the statistical conclusion. Such statistical reporting
-                            inconsistencies affect the reproducibility and quality of scientific findings. We developed
-                            the R package “statcheck” and the accompanying web app http://statcheck.io to automatically
-                            find these inconsistencies. In my talk, I will briefly explain how statcheck works. I will
-                            discuss statcheck’s potential in preventing statistical errors through self-checks and peer
-                            review, and discuss how statcheck can be used for meta-research. Furthermore, I will briefly
-                            give an overview of current developments, including a statcheck Word add-in and the
-                            implementation of Natural Language Processing techniques to expand statcheck’s searching
-                            algorithm.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day1_presentations">
-                    <td>2021-03-23</td>
-                    <td>12:30 PM</td>
-                    <td>
-                    </td>
-                    <td>
-                        <h5>Contributed presentations</h5>
-                        <p>12:30 PM - 12:50 PM:<br><em>Ghazal Mazaheri, Kevin Urrutia Avila and Amit K.
-                            Roy-Chowdhury</em>,
-                            "Learning to Identify
-                            Image Duplications in Scientific Publications"
-                            <a href="pdfs/CRI-CONF_2021_paper_1.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                        </p>
-                        <p>12:55 PM - 01:15 PM:<br><em>Kyle Siler, Philippe Vincent-Lamarre, Cassidy R. Sugimoto and
-                            Vincent
-                            Larivière</em>, "The Lacuna Database: Empirical Data to Identify Obscure, Unconventional,
-                            Questionable and/or Predatory Journals"
-                            <a href="pdfs/CRI-CONF_2021_paper_2.pdf"><i class="fa fa-file-pdf-o"></i></a></p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Contributed Presentations</td>
-                </tr>
-                <tr id="talk_delp">
-                    <td>2021-03-23</td>
-                    <td>01:30 PM</td>
-                    <td>
-                        <span class="name">Edward J. Delp</span>
-                        <small>
-                            The Charles William Harrison Distinguished Professor of Electrical and Computer Engineering
-                            at Purdue University
-                        </small>
-                    </td>
-                    <td>
-                        <h5>A System for Forensic Analysis of Scientific Images
-                        </h5>
-                        <p>
-                            In this talk I will describe a system that we are developing for the forensic analysis of
-                            images and other media extracted from a scientific publication. This system uses many modern
-                            media forensic methods to examine images and determine if the image has been likely altered
-                            or modified. The tools that are available include duplication detection, copy/move
-                            detection, provenance analysis and media forensics tools. The current system has methods for
-                            extracting images, figures, and captions and maintaining the relative relationships of the
-                            figures in a paper. The system has a simple and intuitive web-based user interface, a
-                            sophisticated database, and is easily extensible using Docker containers.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="panel_institutional_investigators">
-                    <td>2021-03-23</td>
-                    <td>02:15 PM</td>
-                    <td>
-                        <div>
-                            <span class="name">Wanda Jones</span>
-                            (Panel chair)
-                            <small>Associate Director for Research and Scientific Integrity, Deputy Director, Office of
-                                Research Integrity, HHS, Office of the Assistant Secretary for Health </small>
-                        </div>
-                        <div>
-                            <span class="name">William C. Trenkle</span>
-                            <small> Senior Advisor for Scientific Integrity, USDA</small>
-                        </div>
-                        <div>
-                            <span class="name">Wouter Vandevelde</span>
-                            <small>Advisor Research Integrity &amp; Ethics, KU Leuven</small>
-                        </div>
-                        <div>
-                            <span class="name">Mary Walsh</span>
-                            <small>Chief Scientific Investigator, Office for Academic and Research Integrity, Harvard
-                                Medical School</small>
-                        </div>
-                    </td>
-                    <td>
-                        <h5><strong>Panel:</strong> Institutional investigators</h5>
-                        <p>
-                            Institutional investigations are many times the first places where systematic problems are
-                            investigated. In many cases, these are the places where investigations are most
-                            consequential because they carry with them the potential for disrupting funding,
-                            collaboration networks, and labs. We hope to exchange ideas about how these institutional
-                            investigations work from the inside—not often understood from the outside. The panelists
-                            will discuss the kinds of issues and challenges they most often find. They will also discuss
-                            the role that technology could play in their work.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Panel</td>
-                </tr>
-                <tr id="day1_break2">
-                    <td>2021-03-23</td>
-                    <td>03:25 PM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="panel_publishers">
-                    <td>2021-03-23</td>
-                    <td>03:30 PM</td>
-                    <td>
-                        <div>
-                            <span class="name">Bernd Pulverer</span>
-                            (Panel chair)
-                            <small>Chief Editor, EMBO Press</small>
-                        </div>
-                        <div>
-                            <span class="name">Renee Hoch</span>
-                            <small>Publication Ethics, PLOS ONE</small>
-                        </div>
-                        <div>
-                            <span class="name">IJsbrand Jan Aalbersberg</span>
-                            <small>Senior Vice President of Research Integrity, Elsevier</small>
-                        </div>
-                        <div>
-                            <span class="name">Maria Kowalczuk</span>
-                            <small>Research Integrity Manager, Springer Nature</small>
-                        </div>
-                    </td>
-                    <td>
-                        <h5><strong>Panel:</strong> Publishers</h5>
-                        <p>
-                            Publishers play a crucial role as the last line of defense against scientific error and
-                            potential misconduct. This panel will discuss the role publishers have in deterring and
-                            detecting potential issues. They may also discuss how they seek clarification from authors,
-                            corrections, or retractions. This panel will discuss the role that human investigators play
-                            and the tools they use or do not use.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Panel</td>
-                </tr>
-                <tr id="day1_break3">
-                    <td>2021-03-23</td>
-                    <td>04:40 PM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="day1_closing">
-                    <td>2021-03-23</td>
-                    <td>04:45 PM</td>
-                    <td>
-                        <span class="name">Daniel Acuna</span>
-                        <small>Syracuse University</small>
-                    </td>
-                    <td>
-                        <em>Closing remarks</em>
-                        <p>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="day1_end">
-                    <td>2021-03-23</td>
-                    <td>05:00 PM</td>
-                    <td>
-                    </td>
-                    <td>
-                        END
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <!--  Day 2   -->
-                <tr id="day2_welcome">
-                    <td>2021-03-24</td>
-                    <td>09:00 AM</td>
-                    <td>
-                        <span class="name">Daniel Acuna</span>
-                        <small>Syracuse University</small>
-                    </td>
-                    <td>
-                        <em>Short remarks</em>
-                        <p>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="talk_bik">
-                    <td>2021-03-24</td>
-                    <td>09:05 AM</td>
-                    <td>
-                        <span class="name">Elisabeth Bik</span>
-                        <small>Harbers-Bik LLC</small>
-                    </td>
-                    <td>
-                        <h5>
-                            Image duplication detection tools — insights from a human spotter
-                        </h5>
-                        <p>
-                            Despite peer-review and editorial screening, science papers can still contain images or
-                            other data of concern. A visual scan of 20,000 papers published in 40 biomedical journals
-                            showed that 4% contained inappropriately duplicated images. Papers containing incorrect or
-                            even falsified data could lead to wasted time and money spent by other researchers trying to
-                            reproduce those results. Thorough image screening before publication would be beneficial for
-                            editors, publishers, and readers, and act as a deterrent for fraudulent submissions. There
-                            is a great need for high-throughput computational tools to find image duplications and
-                            manipulations in scientific manuscripts, and to help detect the growing number of fabricated
-                            manuscripts produced by paper mills. Elisabeth Bik will present some case examples,
-                            insights, and challenges that she has encountered as a human visual duplication detector.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="talk_weber">
-                    <td>2021-03-24</td>
-                    <td>10:00 AM</td>
-                    <td>
-                        <span class="name">Debora Weber-Wulff</span>
-                        <small>
-                            Professor for Media and Computing at the HTW Berlin
-                        </small>
-                    </td>
-                    <td>
-                        <h5>Responsible Use of Support Tools for Plagiarism Detection
-                        </h5>
-                        <p>
-                            Many academic institutions are of the opinion that they can simply solve the problem of
-                            plagiarism by purchasing the use of so-called plagiarism detection software. But as a recent
-                            test of such support tools shows, the systems don't find all plagiarism and will report text
-                            overlap that is not plagiarism as if it were. Institutions that rely only on some similarity
-                            measure for determining sanctions need to be aware of how meaningless the numbers these
-                            systems report are. In this talk the results of the recent test of support tools for
-                            detecting plagiarism conducted by the European Network of Academic Integrity will be
-                            presented, followed by a discussion of what constitutes the responsible use of such tools.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day2_break1">
-                    <td>2021-03-24</td>
-                    <td>10:45 AM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="talk_lauer">
-                    <td>2021-03-24</td>
-                    <td>11:00 AM</td>
-                    <td>
-                        <span class="name">Michael Lauer</span>
-                        <small>
-                            Deputy Director for Extramural Research at the National Institutes of Health (NIH)
-                        </small>
-                    </td>
-                    <td>
-                        TBA
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="talk_turek">
-                    <td>2021-03-24</td>
-                    <td>11:45 AM</td>
-                    <td>
-                        <span class="name">Matt Turek</span>
-                        <small>
-                            Information Innovation Office (I2O), Program Manager, DARPA
-                        </small>
-                    </td>
-                    <td>
-                        TBA
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day2_presentations">
-                    <td>2021-03-24</td>
-                    <td>12:30 PM</td>
-                    <td>
-                    </td>
-                    <td>
-                        <h5>Contributed presentations</h5>
-                        <p>12:30 PM - 12:50 PM:<br><em>Zubair Afzal, Marleen Sta, Marialaura Martinico, Daniel Gregory,
-                            Lekhraj Sharma, Ramsundhar Baskaravelu and George Tsatsaronis</em>,
-                            "Improving reproducibility by automating key resource tables"
-                            <a href="pdfs/CRI-CONF_2021_paper_3.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                        </p>
-                        <p>12:55 PM - 01:15 PM:<br><em>Colby Vorland, David Allison and Andrew Brown</em>,
-                            "Semi-automated
-                            Screening for Improbable Randomization in PDFs"
-                            <a href="pdfs/CRI-CONF_2021_paper_5.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Contributed Presentations</td>
-                </tr>
-                <tr id="panel_funders">
-                    <td>2021-03-24</td>
-                    <td>01:30 PM</td>
-                    <td>
-                        <div>
-                            <span class="name">Benyamin Margolis</span>
-                            (Panel chair)
-                            <small>Information Innovation Office (I2O), Program Manager, DARPA</small>
-                        </div>
-                        <div>
-                            <span class="name">Wenda Bauchspies</span>
-                            <small>Program Director, Ethical and Responsible Research (ER2) and
-                                Science and Technology Studies (STS), NSF</small>
-                        </div>
-                        <div>
-                            <span class="name">Michael Lauer</span>
-                            <small>Deputy Director for Extramural Research at the National Institutes of Health (NIH)
-                            </small>
-                        </div>
-                        <div>
-                            <span class="name">Matt Turek</span>
-                            <small>Information Innovation Office (I2O), Program Manager, DARPA</small>
-                        </div>
-                    </td>
-                    <td>
-                        <h5><strong>Panel:</strong> Funders</h5>
-                        <p>
-                            This panel will provide a funder’s perspective on research integrity. One view is on the
-                            investigative role of research integrity issues. The panel may discuss how they investigate
-                            research integrity problems within their organization or organizations they oversee. Cases
-                            of scientific errors or misconduct not only severely impact science but also might produce
-                            significant losses to the funder. Some funders engage in direct research efforts to
-                            understand research misconduct and educate scientists and institutions about it. Other
-                            funders see research integrity and forensic science in general as a more fundamental
-                            long-term threat to the foundations of science and even as a tool used by adversaries. In
-                            this sense, research integrity applications go beyond scientific research and might
-                            percolate into other society areas, such as fake news generation and deception capabilities.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Panel</td>
-                </tr>
-                <tr id="competition">
-                    <td>2021-03-24</td>
-                    <td>02:40 PM</td>
-                    <td>
-                        <span class="name">Daniel Acuna</span>
-                        <small>
-                            Syracuse University
-                        </small>
-                    </td>
-                    <td>
-                        <h5><strong>Competition launch:</strong> Artificial Intelligence for Computational Research
-                            Integrity</h5>
-                        <p>
-                            Numerous cases of scientific mistakes or even misconduct frequently appear in the media.
-                            Scientists, publishers, and institutions care about these issues but are overwhelmed by the
-                            number of submissions: reviewing them is mostly done manually in a time consuming and costly
-                            manner. This commentary suggests that we can use artificial intelligence (AI) to improve how
-                            publications are filtered at an unprecedented scale and accuracy levels. The key to
-                            achieving these goals is to take a page from AI’s book: create high-quality, large-scale
-                            datasets of common scientific errors or potential misconduct that modern AI techniques can
-                            use to learn from and recognize. Akin to how AI has revolutionized object recognition,
-                            speech recognition, and information retrieval, this new research integrity era, which we
-                            call computational research integrity, promises to revolutionize how we detect errors before
-                            they get published. We introduce the inaugural Computational Research Integrity Conference
-                            and a research integrity competition to spearhead these new ideas. Finally, we also discuss
-                            unique challenges and future directions.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day2_break2">
-                    <td>2021-03-24</td>
-                    <td>03:25 PM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="panel_tools">
-                    <td>2021-03-24</td>
-                    <td>03:30 PM</td>
-                    <td>
-                        <div>
-                            <span class="name">Daniel Acuna</span>
-                            (Panel chair)
-                            <small>Syracuse University</small>
-                        </div>
-                        <div>
+            <div class="table-responsive">
+                <table id="talks-table" class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col" data-priority="1">Time</th>
+                        <th scope="col" data-priority="1">Presenter</th>
+                        <th scope="col">Event information</th>
+                        <th scope="col">Watch</th>
+                        <th scope="col">Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--  Day 1   -->
+                    <tr id="day1_preconference">
+                        <td>2021-03-23</td>
+                        <td>08:30 AM</td>
+                        <td>
+                        </td>
+                        <td>
+                            <h5>Pre-conference video and audio test</h5>
+                            <p>
+                                Check that your video and audio work before the first event starts.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day1_welcome">
+                        <td>2021-03-23</td>
+                        <td>09:00 AM</td>
+                        <td>
+                            <div>
+                                <span class="name">Daniel Acuna</span>
+                                <small>Syracuse University</small></div>
+                            <div>
+                                <span class="name">Benyamin Margolis</span>
+                                <small>Health Scientist Administrator,
+                                    Division of Education and Integrity,
+                                    Office of Research Integrity, OASH/OS/HHS</small>
+                            </div>
+                        </td>
+                        <td>
+                            <em>Welcome and remarks</em>
+                            <p>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="talk_ambalavanar">
+                        <td>2021-03-23</td>
+                        <td>09:15 AM</td>
+                        <td>
+                            <span class="name">Ranjini Ambalavanar</span>
+                            ,
+                            <small>Acting Director of the Division of Investigative Oversight (DIO),
+                                Office of Research Integrity (ORI)</small>
+                        </td>
+                        <td>
+                            <h5>Examining Questioned Data — Detection Tools and Need for Automation
+                            </h5>
+                            <p>
+                                Research misconduct in the federal regulation (42 C.F.R. Part 93) means fabrication,
+                                falsification, or plagiarism (FFP) in proposing, performing, or reviewing research, or
+                                in
+                                reporting research results (§ 93.103). This session will discuss the types of questioned
+                                data and tools that currently are used to identify and confirm FFP with special emphasis
+                                on
+                                the need for additional tools and automation. Examples of different types of
+                                falsified/fabricated (FF) data from closed misconduct cases at the Office of Research
+                                Integrity (ORI) and forensic tools used by ORI to detect and confirm intentional FF will
+                                be
+                                presented.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="talk_byrne">
+                        <td>2021-03-23</td>
+                        <td>10:00 AM</td>
+                        <td>
                             <span class="name">Jennifer Byrne</span>
-                            <small>The University of Sydney</small>
-                        </div>
-                        <div>
-                            <span class="name">Amit K. Roy-Chowdhury</span>
-                            <small>UC, Riverside</small>
-                        </div>
-                    </td>
-                    <td>
-                        <h5><strong>Panel:</strong> Tool Developers</h5>
-                        <p>
-                            One concrete result of computational approaches in research integrity will depend on the
-                            development of tools. We all have become used to text plagiarism detection, but researchers
-                            could significantly expand these kinds of tools to other media modalities. This panel has
-                            experts who have identified errors and potential misconduct in images, genetic sequences,
-                            and statistical data. This panel will discuss current challenges and opportunities in tool
-                            development, especially regarding why we do not use them more widely and what's missing.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Panel</td>
-                </tr>
-                <tr id="day2_break3">
-                    <td>2021-03-24</td>
-                    <td>04:40 PM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="day2_closing">
-                    <td>2021-03-24</td>
-                    <td>04:45 PM</td>
-                    <td>
-                        <span class="name">Daniel Acuna</span>
-                        <small>Syracuse University</small>
-                    </td>
-                    <td>
-                        <em>Closing remarks</em>
-                        <p>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="day2_end">
-                    <td>2021-03-24</td>
-                    <td>05:00 PM</td>
-                    <td>
-                    </td>
-                    <td>
-                        END
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <!--  Day 2   -->
-                <tr id="day3_welcome">
-                    <td>2021-03-25</td>
-                    <td>09:00 AM</td>
-                    <td>
-                    </td>
-                    <td>
-                        <em>Remarks</em>
-                        <p>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="talk_barbour">
-                    <td>2021-03-25</td>
-                    <td>09:15 AM</td>
-                    <td>
-                        <span class="name">Boris Barbour</span>
-                        <small>The PubPeer Foundation</small>
-                    </td>
-                    <td>
-                        TBA
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="talk_scheirer">
-                    <td>2021-03-25</td>
-                    <td>10:00 AM</td>
-                    <td>
-                        <span class="name">Walter Scheirer</span>
-                        <small>
-                            University of Notre Dame
-                        </small>
-                    </td>
-                    <td>
-                        <h5>Understanding the Provenance of Visual Disinformation Targeting Science</h5>
-                        <p>
-                            The COVID-19 pandemic has attracted significant attention to scientific matters related to
-                            the cause, treatment, and prevention of the disease that has upended our lives. Alarmingly,
-                            not all of the information available on the Internet is what it appears to be. Deceptive
-                            memes, bogus ads, and fabricated infographics are proliferating, with all threatening to
-                            undermine the public's trust in science. Given the vast scale of the problem, an automated
-                            capability that can identify new instances of visual disinformation, trace its origin, and
-                            ultimately flag it as being problematic is needed. But compared to text, visual content
-                            presents unique challenges for media forensics. This talk presents an end-to-end processing
-                            pipeline for image provenance analysis, which works at real-world scale. It employs a
-                            cutting-edge image filtering solution that is able to find related images, as well as novel
-                            techniques for obtaining a provenance graph that expresses how the images, as nodes, are
-                            ancestrally connected. Building from provenance analysis, the talk goes on to introduce a
-                            scalable automated visual recognition pipeline for discovering meme genres of diverse
-                            appearance. This pipeline can ingest meme images from a social network, apply computer
-                            vision-based techniques to extract features and index new images into a database, and then
-                            organize the memes into related genres. Recent examples of visual disinformation targeting
-                            science will be highlighted, including repurposed imagery, parasitic advertising, and
-                            pandemic-related memes. Finally, the talk will conclude with thoughts on continued research
-                            in this direction.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day3_break1">
-                    <td>2021-03-25</td>
-                    <td>10:45 AM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="talk_biagioli">
-                    <td>2021-03-25</td>
-                    <td>11:00 AM</td>
-                    <td>
-                        <span class="name">Mario Biagioli</span>
-                        <small>
-                            Distinguished Professor of Law and Communication
-                        </small>
-                    </td>
-                    <td>
-                        TBA
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="talk_beck">
-                    <td>2021-03-25</td>
-                    <td>11:45 AM</td>
-                    <td>
-                        <span class="name">Thorsten Beck</span>
-                        <small>
-                            HEADT Centre - Humboldt University of Berlin
-                        </small>
-                    </td>
-                    <td>
-                        TBA
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="day3_presentations">
-                    <td>2021-03-25</td>
-                    <td>12:30 PM</td>
-                    <td>
-                    </td>
-                    <td>
-                        <h5>Contributed presentations</h5>
-                        <p>12:30 PM - 12:50 PM:<br><em>Yury Kashnitsky, Vaishnavi Kandala, Egbert Wezenbeek Van,
-                            Ijsbrand
-                            Jan Aalbersberg, Catriona Fennell and Georgios Tsatsaronis</em>,
-                            "How near-duplicate detection improves editors' and authors' publishing experience"
-                            <a href="pdfs/CRI-CONF_2021_paper_4.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Contributed Presentations</td>
-                </tr>
-                <tr id="talk_oransky">
-                    <td>2021-03-25</td>
-                    <td>01:30 PM</td>
-                    <td>
-                        <span class="name">Ivan Oransky</span>
-                        <small>
-                            Retraction Watch
-                        </small>
-                    </td>
-                    <td>
-                        <h5>From Cancer to COVID-19, Does Science Self-Correct?</h5>
-                        <p>
-                            Rapid publication of results — particularly on preprint servers — has grown dramatically
-                            during the COVID-19 pandemic, and has forced researchers, health care professionals,
-                            journalists, and others to grapple with the concept of reliable and actionable information.
-                            The pandemic has given rise to more than 80 retractions at the time of this writing. Is that
-                            cause for concern? My lens for this talk will be ten years of experience reporting on
-                            retractions for Retraction Watch, including creating the world’s most comprehensive database
-                            of retractions, with close to 24,000 and counting.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Invited Presentation</td>
-                </tr>
-                <tr id="panel_journalists">
-                    <td>2021-03-25</td>
-                    <td>02:15 PM</td>
-                    <td>
-                        <div>
-                            <span class="name">Ivan Oransky</span>
-                            <small>Retraction Watch</small>
-                        </div>
-                        <div>
-                            <span class="name">Richard Van Noorden</span>
-                            <small>Nature</small>
-                        </div>
-                        <div>
-                            <span class="name">Stephanie Lee</span>
-                            <small>Buzzfeed</small>
-                        </div>
-                        <div>
+                            <small>
+                                Director of Biobanking, NSW Health Pathology,
+                                Professor of Molecular Oncology,
+                                School of Medical Sciences,
+                                Faculty of Medicine and Health
+                            </small>
+                        </td>
+                        <td>
+                            <h5>Computational research integrity and cancer research: building tools and narratives to
+                                improve the health of the research literature
+                            </h5>
+                            <p>
+                                Computational research integrity and cancer research are young and old research fields,
+                                respectively, and yet they have much in common. Cancer research involves the discovery
+                                of
+                                biological features that reliably distinguish cancer cells from normal cells. These
+                                features
+                                are targeted by drug developers to create cancer therapies that are tested by
+                                researchers
+                                and then applied by clinicians to patients. Similarly, computational research integrity
+                                involves the identification of publication features that reliably depart from
+                                established
+                                norms or standards. These features inform the creation of automated tools that are then
+                                tested and applied by researchers and publishers to manuscripts and papers. Based upon
+                                our
+                                experience of applying the semi-automated tool Seek &amp; Blastn to the molecular cancer
+                                research literature, we will describe how the skill to employ automated literature
+                                screening
+                                tools needs to be matched by the will to apply these tools and then act upon their
+                                results.
+                                Beyond developing the skills to apply automated literature screening tools within
+                                different
+                                user groups, we propose that achieving the necessary willingness to tackle pervasive
+                                research integrity problems will require the development of positive narratives that
+                                speak
+                                to shared aspirations and values.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day1_break1">
+                        <td>2021-03-23</td>
+                        <td>10:45 AM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="talk_qualkenbush_raimondo">
+                        <td>2021-03-23</td>
+                        <td>11:00 AM</td>
+                        <td>
+                            <div>
+                                <span class="name">Lauran Qualkenbush</span>
+                                <small>
+                                    Director, Office for Research Integrity at Northwestern University
+                                </small>
+                            </div>
+                            <div>
+                                <span class="name">Corinna Raimondo</span>
+                                <small>
+                                    Senior Compliance Specialist, Office for Research Integrity, Northwestern University
+                                </small>
+                            </div>
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="talk_nuijten">
+                        <td>2021-03-23</td>
+                        <td>11:45 AM</td>
+                        <td>
+                            <span class="name">Michèle Nuijten</span>
+                            <small>
+                                Assistant Professor at Tilburg University
+                            </small>
+                        </td>
+                        <td>
+                            <h5>statcheck: a spellchecker for statistics</h5>
+                            <p>
+                                Half of the psychology papers contain inconsistent statistical results in which the
+                                reported
+                                p‑value does not match the reported test statistic and degrees of freedom. Most of these
+                                inconsistencies seem to be small and inconsequential, but in over 12.5% of the papers
+                                there
+                                are inconsistencies that might change the statistical conclusion. Such statistical
+                                reporting
+                                inconsistencies affect the reproducibility and quality of scientific findings. We
+                                developed
+                                the R package “statcheck” and the accompanying web app http://statcheck.io to
+                                automatically
+                                find these inconsistencies. In my talk, I will briefly explain how statcheck works. I
+                                will
+                                discuss statcheck’s potential in preventing statistical errors through self-checks and
+                                peer
+                                review, and discuss how statcheck can be used for meta-research. Furthermore, I will
+                                briefly
+                                give an overview of current developments, including a statcheck Word add-in and the
+                                implementation of Natural Language Processing techniques to expand statcheck’s searching
+                                algorithm.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day1_presentations">
+                        <td>2021-03-23</td>
+                        <td>12:30 PM</td>
+                        <td>
+                        </td>
+                        <td>
+                            <h5>Contributed presentations</h5>
+                            <p>12:30 PM - 12:50 PM:<br><em>Ghazal Mazaheri, Kevin Urrutia Avila and Amit K.
+                                Roy-Chowdhury</em>,
+                                "Learning to Identify
+                                Image Duplications in Scientific Publications"
+                                <a href="pdfs/CRI-CONF_2021_paper_1.pdf" target="_blank"><i
+                                        class="fa fa-file-pdf-o"></i></a>
+                            </p>
+                            <p>12:55 PM - 01:15 PM:<br><em>Kyle Siler, Philippe Vincent-Lamarre, Cassidy R. Sugimoto and
+                                Vincent
+                                Larivière</em>, "The Lacuna Database: Empirical Data to Identify Obscure,
+                                Unconventional,
+                                Questionable and/or Predatory Journals"
+                                <a href="pdfs/CRI-CONF_2021_paper_2.pdf" target="_blank"><i
+                                        class="fa fa-file-pdf-o"></i></a></p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Contributed Presentations</td>
+                    </tr>
+                    <tr id="talk_delp">
+                        <td>2021-03-23</td>
+                        <td>01:30 PM</td>
+                        <td>
+                            <span class="name">Edward J. Delp</span>
+                            <small>
+                                The Charles William Harrison Distinguished Professor of Electrical and Computer
+                                Engineering
+                                at Purdue University
+                            </small>
+                        </td>
+                        <td>
+                            <h5>A System for Forensic Analysis of Scientific Images
+                            </h5>
+                            <p>
+                                In this talk I will describe a system that we are developing for the forensic analysis
+                                of
+                                images and other media extracted from a scientific publication. This system uses many
+                                modern
+                                media forensic methods to examine images and determine if the image has been likely
+                                altered
+                                or modified. The tools that are available include duplication detection, copy/move
+                                detection, provenance analysis and media forensics tools. The current system has methods
+                                for
+                                extracting images, figures, and captions and maintaining the relative relationships of
+                                the
+                                figures in a paper. The system has a simple and intuitive web-based user interface, a
+                                sophisticated database, and is easily extensible using Docker containers.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="panel_institutional_investigators">
+                        <td>2021-03-23</td>
+                        <td>02:15 PM</td>
+                        <td>
+                            <div>
+                                <span class="name">Wanda Jones</span>
+                                (Panel chair)
+                                <small>Associate Director for Research and Scientific Integrity, Deputy Director, Office
+                                    of
+                                    Research Integrity, HHS, Office of the Assistant Secretary for Health </small>
+                            </div>
+                            <div>
+                                <span class="name">William C. Trenkle</span>
+                                <small> Senior Advisor for Scientific Integrity, USDA</small>
+                            </div>
+                            <div>
+                                <span class="name">Wouter Vandevelde</span>
+                                <small>Advisor Research Integrity &amp; Ethics, KU Leuven</small>
+                            </div>
+                            <div>
+                                <span class="name">Mary Walsh</span>
+                                <small>Chief Scientific Investigator, Office for Academic and Research Integrity,
+                                    Harvard
+                                    Medical School</small>
+                            </div>
+                        </td>
+                        <td>
+                            <h5><strong>Panel:</strong> Institutional investigators</h5>
+                            <p>
+                                Institutional investigations are many times the first places where systematic problems
+                                are
+                                investigated. In many cases, these are the places where investigations are most
+                                consequential because they carry with them the potential for disrupting funding,
+                                collaboration networks, and labs. We hope to exchange ideas about how these
+                                institutional
+                                investigations work from the inside—not often understood from the outside. The panelists
+                                will discuss the kinds of issues and challenges they most often find. They will also
+                                discuss
+                                the role that technology could play in their work.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Panel</td>
+                    </tr>
+                    <tr id="day1_break2">
+                        <td>2021-03-23</td>
+                        <td>03:25 PM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="panel_publishers">
+                        <td>2021-03-23</td>
+                        <td>03:30 PM</td>
+                        <td>
+                            <div>
+                                <span class="name">Bernd Pulverer</span>
+                                (Panel chair)
+                                <small>Chief Editor, EMBO Press</small>
+                            </div>
+                            <div>
+                                <span class="name">Renee Hoch</span>
+                                <small>Publication Ethics, PLOS ONE</small>
+                            </div>
+                            <div>
+                                <span class="name">IJsbrand Jan Aalbersberg</span>
+                                <small>Senior Vice President of Research Integrity, Elsevier</small>
+                            </div>
+                            <div>
+                                <span class="name">Maria Kowalczuk</span>
+                                <small>Research Integrity Manager, Springer Nature</small>
+                            </div>
+                        </td>
+                        <td>
+                            <h5><strong>Panel:</strong> Publishers</h5>
+                            <p>
+                                Publishers play a crucial role as the last line of defense against scientific error and
+                                potential misconduct. This panel will discuss the role publishers have in deterring and
+                                detecting potential issues. They may also discuss how they seek clarification from
+                                authors,
+                                corrections, or retractions. This panel will discuss the role that human investigators
+                                play
+                                and the tools they use or do not use.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Panel</td>
+                    </tr>
+                    <tr id="day1_break3">
+                        <td>2021-03-23</td>
+                        <td>04:40 PM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day1_closing">
+                        <td>2021-03-23</td>
+                        <td>04:45 PM</td>
+                        <td>
                             <span class="name">Daniel Acuna</span>
-                            <small>(moderator only) Syracuse University</small>
-                        </div>
-                    </td>
-                    <td>
-                        <h5><strong>Panel:</strong> Journalists</h5>
-                        <p>
-                            Journalists have uncovered many scientific integrity cases that have helped us understand
-                            the extent and gravity of research misconduct. The website Retraction Watch and PubPeer have
-                            become the place where these investigations are heavily discussed, and evidence presented.
-                            They have provided invaluable tools to the scientific community—without much official
-                            recognition. This panel discusses journalism's role in research integrity and how tools may
-                            help their investigations.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Panel</td>
-                </tr>
-                <tr id="day3_break2">
-                    <td>2021-03-25</td>
-                    <td>03:25 PM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="panel_investigators_whistleblowers">
-                    <td>2021-03-25</td>
-                    <td>03:30 PM</td>
-                    <td>
-                        <div>
-                            <span class="name">Paul Brookes</span>
-                            (Panel chair)
-                            , University of Rochester
-                        </div>
-                        <div>
+                            <small>Syracuse University</small>
+                        </td>
+                        <td>
+                            <em>Closing remarks</em>
+                            <p>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day1_end">
+                        <td>2021-03-23</td>
+                        <td>05:00 PM</td>
+                        <td>
+                        </td>
+                        <td>
+                            END
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <!--  Day 2   -->
+                    <tr id="day2_welcome">
+                        <td>2021-03-24</td>
+                        <td>09:00 AM</td>
+                        <td>
+                            <span class="name">Daniel Acuna</span>
+                            <small>Syracuse University</small>
+                        </td>
+                        <td>
+                            <em>Short remarks</em>
+                            <p>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="talk_bik">
+                        <td>2021-03-24</td>
+                        <td>09:05 AM</td>
+                        <td>
                             <span class="name">Elisabeth Bik</span>
-                            , Harbers-Bik LLC
-                        </div>
-                        <div>
+                            <small>Harbers-Bik LLC</small>
+                        </td>
+                        <td>
+                            <h5>
+                                Image duplication detection tools — insights from a human spotter
+                            </h5>
+                            <p>
+                                Despite peer-review and editorial screening, science papers can still contain images or
+                                other data of concern. A visual scan of 20,000 papers published in 40 biomedical
+                                journals
+                                showed that 4% contained inappropriately duplicated images. Papers containing incorrect
+                                or
+                                even falsified data could lead to wasted time and money spent by other researchers
+                                trying to
+                                reproduce those results. Thorough image screening before publication would be beneficial
+                                for
+                                editors, publishers, and readers, and act as a deterrent for fraudulent submissions.
+                                There
+                                is a great need for high-throughput computational tools to find image duplications and
+                                manipulations in scientific manuscripts, and to help detect the growing number of
+                                fabricated
+                                manuscripts produced by paper mills. Elisabeth Bik will present some case examples,
+                                insights, and challenges that she has encountered as a human visual duplication
+                                detector.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="talk_weber">
+                        <td>2021-03-24</td>
+                        <td>10:00 AM</td>
+                        <td>
+                            <span class="name">Debora Weber-Wulff</span>
+                            <small>
+                                Professor for Media and Computing at the HTW Berlin
+                            </small>
+                        </td>
+                        <td>
+                            <h5>Responsible Use of Support Tools for Plagiarism Detection
+                            </h5>
+                            <p>
+                                Many academic institutions are of the opinion that they can simply solve the problem of
+                                plagiarism by purchasing the use of so-called plagiarism detection software. But as a
+                                recent
+                                test of such support tools shows, the systems don't find all plagiarism and will report
+                                text
+                                overlap that is not plagiarism as if it were. Institutions that rely only on some
+                                similarity
+                                measure for determining sanctions need to be aware of how meaningless the numbers these
+                                systems report are. In this talk the results of the recent test of support tools for
+                                detecting plagiarism conducted by the European Network of Academic Integrity will be
+                                presented, followed by a discussion of what constitutes the responsible use of such
+                                tools.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day2_break1">
+                        <td>2021-03-24</td>
+                        <td>10:45 AM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="talk_lauer">
+                        <td>2021-03-24</td>
+                        <td>11:00 AM</td>
+                        <td>
+                            <span class="name">Michael Lauer</span>
+                            <small>
+                                Deputy Director for Extramural Research at the National Institutes of Health (NIH)
+                            </small>
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="talk_turek">
+                        <td>2021-03-24</td>
+                        <td>11:45 AM</td>
+                        <td>
+                            <span class="name">Matt Turek</span>
+                            <small>
+                                Information Innovation Office (I2O), Program Manager, DARPA
+                            </small>
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day2_presentations">
+                        <td>2021-03-24</td>
+                        <td>12:30 PM</td>
+                        <td>
+                        </td>
+                        <td>
+                            <h5>Contributed presentations</h5>
+                            <p>12:30 PM - 12:50 PM:<br><em>Zubair Afzal, Marleen Sta, Marialaura Martinico, Daniel
+                                Gregory,
+                                Lekhraj Sharma, Ramsundhar Baskaravelu and George Tsatsaronis</em>,
+                                "Improving reproducibility by automating key resource tables"
+                                <a href="pdfs/CRI-CONF_2021_paper_3.pdf" target="_blank"><i
+                                        class="fa fa-file-pdf-o"></i></a>
+                            </p>
+                            <p>12:55 PM - 01:15 PM:<br><em>Colby Vorland, David Allison and Andrew Brown</em>,
+                                "Semi-automated
+                                Screening for Improbable Randomization in PDFs"
+                                <a href="pdfs/CRI-CONF_2021_paper_5.pdf" target="_blank"><i
+                                        class="fa fa-file-pdf-o"></i></a>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Contributed Presentations</td>
+                    </tr>
+                    <tr id="panel_funders">
+                        <td>2021-03-24</td>
+                        <td>01:30 PM</td>
+                        <td>
+                            <div>
+                                <span class="name">Benyamin Margolis</span>
+                                (Panel chair)
+                                <small>Information Innovation Office (I2O), Program Manager, DARPA</small>
+                            </div>
+                            <div>
+                                <span class="name">Wenda Bauchspies</span>
+                                <small>Program Director, Ethical and Responsible Research (ER2) and
+                                    Science and Technology Studies (STS), NSF</small>
+                            </div>
+                            <div>
+                                <span class="name">Michael Lauer</span>
+                                <small>Deputy Director for Extramural Research at the National Institutes of Health
+                                    (NIH)
+                                </small>
+                            </div>
+                            <div>
+                                <span class="name">Matt Turek</span>
+                                <small>Information Innovation Office (I2O), Program Manager, DARPA</small>
+                            </div>
+                        </td>
+                        <td>
+                            <h5><strong>Panel:</strong> Funders</h5>
+                            <p>
+                                This panel will provide a funder’s perspective on research integrity. One view is on the
+                                investigative role of research integrity issues. The panel may discuss how they
+                                investigate
+                                research integrity problems within their organization or organizations they oversee.
+                                Cases
+                                of scientific errors or misconduct not only severely impact science but also might
+                                produce
+                                significant losses to the funder. Some funders engage in direct research efforts to
+                                understand research misconduct and educate scientists and institutions about it. Other
+                                funders see research integrity and forensic science in general as a more fundamental
+                                long-term threat to the foundations of science and even as a tool used by adversaries.
+                                In
+                                this sense, research integrity applications go beyond scientific research and might
+                                percolate into other society areas, such as fake news generation and deception
+                                capabilities.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Panel</td>
+                    </tr>
+                    <tr id="competition">
+                        <td>2021-03-24</td>
+                        <td>02:40 PM</td>
+                        <td>
+                            <span class="name">Daniel Acuna</span>
+                            <small>
+                                Syracuse University
+                            </small>
+                        </td>
+                        <td>
+                            <h5><strong>Competition launch:</strong> Artificial Intelligence for Computational Research
+                                Integrity</h5>
+                            <p>
+                                Numerous cases of scientific mistakes or even misconduct frequently appear in the media.
+                                Scientists, publishers, and institutions care about these issues but are overwhelmed by
+                                the
+                                number of submissions: reviewing them is mostly done manually in a time consuming and
+                                costly
+                                manner. This commentary suggests that we can use artificial intelligence (AI) to improve
+                                how
+                                publications are filtered at an unprecedented scale and accuracy levels. The key to
+                                achieving these goals is to take a page from AI’s book: create high-quality, large-scale
+                                datasets of common scientific errors or potential misconduct that modern AI techniques
+                                can
+                                use to learn from and recognize. Akin to how AI has revolutionized object recognition,
+                                speech recognition, and information retrieval, this new research integrity era, which we
+                                call computational research integrity, promises to revolutionize how we detect errors
+                                before
+                                they get published. We introduce the inaugural Computational Research Integrity
+                                Conference
+                                and a research integrity competition to spearhead these new ideas. Finally, we also
+                                discuss
+                                unique challenges and future directions.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day2_break2">
+                        <td>2021-03-24</td>
+                        <td>03:25 PM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="panel_tools">
+                        <td>2021-03-24</td>
+                        <td>03:30 PM</td>
+                        <td>
+                            <div>
+                                <span class="name">Daniel Acuna</span>
+                                (Panel chair)
+                                <small>Syracuse University</small>
+                            </div>
+                            <div>
+                                <span class="name">Jennifer Byrne</span>
+                                <small>The University of Sydney</small>
+                            </div>
+                            <div>
+                                <span class="name">Amit K. Roy-Chowdhury</span>
+                                <small>UC, Riverside</small>
+                            </div>
+                        </td>
+                        <td>
+                            <h5><strong>Panel:</strong> Tool Developers</h5>
+                            <p>
+                                One concrete result of computational approaches in research integrity will depend on the
+                                development of tools. We all have become used to text plagiarism detection, but
+                                researchers
+                                could significantly expand these kinds of tools to other media modalities. This panel
+                                has
+                                experts who have identified errors and potential misconduct in images, genetic
+                                sequences,
+                                and statistical data. This panel will discuss current challenges and opportunities in
+                                tool
+                                development, especially regarding why we do not use them more widely and what's missing.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Panel</td>
+                    </tr>
+                    <tr id="day2_break3">
+                        <td>2021-03-24</td>
+                        <td>04:40 PM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day2_closing">
+                        <td>2021-03-24</td>
+                        <td>04:45 PM</td>
+                        <td>
+                            <span class="name">Daniel Acuna</span>
+                            <small>Syracuse University</small>
+                        </td>
+                        <td>
+                            <em>Closing remarks</em>
+                            <p>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day2_end">
+                        <td>2021-03-24</td>
+                        <td>05:00 PM</td>
+                        <td>
+                        </td>
+                        <td>
+                            END
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <!--  Day 2   -->
+                    <tr id="day3_welcome">
+                        <td>2021-03-25</td>
+                        <td>09:00 AM</td>
+                        <td>
+                        </td>
+                        <td>
+                            <em>Remarks</em>
+                            <p>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="talk_barbour">
+                        <td>2021-03-25</td>
+                        <td>09:15 AM</td>
+                        <td>
                             <span class="name">Boris Barbour</span>
-                            , The PubPeer Foundation
-                        </div>
-                        <div>
-                            <span class="name">Jana Christopher</span>
-                            , Image-Integrity
-                        </div>
-                    </td>
-                    <td>
-                        <h5><strong>Panel:</strong> Investigators/whistleblowers</h5>
-                        <p>
-                            There is no doubt that the whistleblower and private investigators' role has become
-                            increasingly crucial for vetting and correcting scientific research. In this panel, the
-                            members will discuss their role in research integrity, their motivations, approaches, and
-                            threats they face. The panel may also discuss how bad actors are adapting and creating new
-                            types of misconduct that are becoming impossible to catch on time or entirely invisible.
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td>Panel</td>
-                </tr>
-                <tr id="day3_break3">
-                    <td>2021-03-25</td>
-                    <td>04:40 PM</td>
-                    <td>
-                        Break
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="day3_open_discussion">
-                    <td>2021-03-25</td>
-                    <td>04:45 PM</td>
-                    <td>
-                        All attendees
-                    </td>
-                    <td>
-                        <em>Open discussion and next steps</em>
-                        <p>
-                        </p>
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr id="day3_end">
-                    <td>2021-03-25</td>
-                    <td>06:00 PM</td>
-                    <td>
-                    </td>
-                    <td>
-                        END
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
+                            <small>The PubPeer Foundation</small>
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="talk_scheirer">
+                        <td>2021-03-25</td>
+                        <td>10:00 AM</td>
+                        <td>
+                            <span class="name">Walter Scheirer</span>
+                            <small>
+                                University of Notre Dame
+                            </small>
+                        </td>
+                        <td>
+                            <h5>Understanding the Provenance of Visual Disinformation Targeting Science</h5>
+                            <p>
+                                The COVID-19 pandemic has attracted significant attention to scientific matters related
+                                to
+                                the cause, treatment, and prevention of the disease that has upended our lives.
+                                Alarmingly,
+                                not all of the information available on the Internet is what it appears to be. Deceptive
+                                memes, bogus ads, and fabricated infographics are proliferating, with all threatening to
+                                undermine the public's trust in science. Given the vast scale of the problem, an
+                                automated
+                                capability that can identify new instances of visual disinformation, trace its origin,
+                                and
+                                ultimately flag it as being problematic is needed. But compared to text, visual content
+                                presents unique challenges for media forensics. This talk presents an end-to-end
+                                processing
+                                pipeline for image provenance analysis, which works at real-world scale. It employs a
+                                cutting-edge image filtering solution that is able to find related images, as well as
+                                novel
+                                techniques for obtaining a provenance graph that expresses how the images, as nodes, are
+                                ancestrally connected. Building from provenance analysis, the talk goes on to introduce
+                                a
+                                scalable automated visual recognition pipeline for discovering meme genres of diverse
+                                appearance. This pipeline can ingest meme images from a social network, apply computer
+                                vision-based techniques to extract features and index new images into a database, and
+                                then
+                                organize the memes into related genres. Recent examples of visual disinformation
+                                targeting
+                                science will be highlighted, including repurposed imagery, parasitic advertising, and
+                                pandemic-related memes. Finally, the talk will conclude with thoughts on continued
+                                research
+                                in this direction.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day3_break1">
+                        <td>2021-03-25</td>
+                        <td>10:45 AM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="talk_biagioli">
+                        <td>2021-03-25</td>
+                        <td>11:00 AM</td>
+                        <td>
+                            <span class="name">Mario Biagioli</span>
+                            <small>
+                                Distinguished Professor of Law and Communication
+                            </small>
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="talk_beck">
+                        <td>2021-03-25</td>
+                        <td>11:45 AM</td>
+                        <td>
+                            <span class="name">Thorsten Beck</span>
+                            <small>
+                                HEADT Centre - Humboldt University of Berlin
+                            </small>
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="day3_presentations">
+                        <td>2021-03-25</td>
+                        <td>12:30 PM</td>
+                        <td>
+                        </td>
+                        <td>
+                            <h5>Contributed presentations</h5>
+                            <p>12:30 PM - 12:50 PM:<br><em>Yury Kashnitsky, Vaishnavi Kandala, Egbert Wezenbeek Van,
+                                Ijsbrand
+                                Jan Aalbersberg, Catriona Fennell and Georgios Tsatsaronis</em>,
+                                "How near-duplicate detection improves editors' and authors' publishing experience"
+                                <a href="pdfs/CRI-CONF_2021_paper_4.pdf" target="_blank"><i
+                                        class="fa fa-file-pdf-o"></i></a>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Contributed Presentations</td>
+                    </tr>
+                    <tr id="talk_oransky">
+                        <td>2021-03-25</td>
+                        <td>01:30 PM</td>
+                        <td>
+                            <span class="name">Ivan Oransky</span>
+                            <small>
+                                Retraction Watch
+                            </small>
+                        </td>
+                        <td>
+                            <h5>From Cancer to COVID-19, Does Science Self-Correct?</h5>
+                            <p>
+                                Rapid publication of results — particularly on preprint servers — has grown dramatically
+                                during the COVID-19 pandemic, and has forced researchers, health care professionals,
+                                journalists, and others to grapple with the concept of reliable and actionable
+                                information.
+                                The pandemic has given rise to more than 80 retractions at the time of this writing. Is
+                                that
+                                cause for concern? My lens for this talk will be ten years of experience reporting on
+                                retractions for Retraction Watch, including creating the world’s most comprehensive
+                                database
+                                of retractions, with close to 24,000 and counting.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Invited Presentation</td>
+                    </tr>
+                    <tr id="panel_journalists">
+                        <td>2021-03-25</td>
+                        <td>02:15 PM</td>
+                        <td>
+                            <div>
+                                <span class="name">Ivan Oransky</span>
+                                <small>Retraction Watch</small>
+                            </div>
+                            <div>
+                                <span class="name">Richard Van Noorden</span>
+                                <small>Nature</small>
+                            </div>
+                            <div>
+                                <span class="name">Stephanie Lee</span>
+                                <small>Buzzfeed</small>
+                            </div>
+                            <div>
+                                <span class="name">Daniel Acuna</span>
+                                <small>(moderator only) Syracuse University</small>
+                            </div>
+                        </td>
+                        <td>
+                            <h5><strong>Panel:</strong> Journalists</h5>
+                            <p>
+                                Journalists have uncovered many scientific integrity cases that have helped us
+                                understand
+                                the extent and gravity of research misconduct. The website Retraction Watch and PubPeer
+                                have
+                                become the place where these investigations are heavily discussed, and evidence
+                                presented.
+                                They have provided invaluable tools to the scientific community—without much official
+                                recognition. This panel discusses journalism's role in research integrity and how tools
+                                may
+                                help their investigations.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Panel</td>
+                    </tr>
+                    <tr id="day3_break2">
+                        <td>2021-03-25</td>
+                        <td>03:25 PM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="panel_investigators_whistleblowers">
+                        <td>2021-03-25</td>
+                        <td>03:30 PM</td>
+                        <td>
+                            <div>
+                                <span class="name">Paul Brookes</span>
+                                (Panel chair)
+                                , University of Rochester
+                            </div>
+                            <div>
+                                <span class="name">Elisabeth Bik</span>
+                                , Harbers-Bik LLC
+                            </div>
+                            <div>
+                                <span class="name">Boris Barbour</span>
+                                , The PubPeer Foundation
+                            </div>
+                            <div>
+                                <span class="name">Jana Christopher</span>
+                                , Image-Integrity
+                            </div>
+                        </td>
+                        <td>
+                            <h5><strong>Panel:</strong> Investigators/whistleblowers</h5>
+                            <p>
+                                There is no doubt that the whistleblower and private investigators' role has become
+                                increasingly crucial for vetting and correcting scientific research. In this panel, the
+                                members will discuss their role in research integrity, their motivations, approaches,
+                                and
+                                threats they face. The panel may also discuss how bad actors are adapting and creating
+                                new
+                                types of misconduct that are becoming impossible to catch on time or entirely invisible.
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>Panel</td>
+                    </tr>
+                    <tr id="day3_break3">
+                        <td>2021-03-25</td>
+                        <td>04:40 PM</td>
+                        <td>
+                            Break
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day3_open_discussion">
+                        <td>2021-03-25</td>
+                        <td>04:45 PM</td>
+                        <td>
+                            All attendees
+                        </td>
+                        <td>
+                            <em>Open discussion and next steps</em>
+                            <p>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr id="day3_end">
+                        <td>2021-03-25</td>
+                        <td>06:00 PM</td>
+                        <td>
+                        </td>
+                        <td>
+                            END
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 </main>
-<div id="loading" class="text-center" style="height: 100%; position: fixed;
+<div id="loading" class="text-center" style="position: fixed;
 width: 100%;
 height:100%;
 display: flex;
@@ -1085,10 +1194,10 @@ top: 0;">
 <!-- Template Main Javascript File -->
 <script src="js/main.js"></script>
 <script src="js/app.js"></script>
-<script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
 <script src="https://cdn.datatables.net/searchpanes/1.2.2/js/dataTables.searchPanes.min.js"></script>
-<script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.3.2/js/dataTables.select.min.js"></script>
 <script src="//cdn.datatables.net/plug-ins/1.10.21/dataRender/datetime.js"></script>
 
 </body>

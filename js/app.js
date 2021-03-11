@@ -16,13 +16,16 @@ authenticate = async () => {
             const href = `https://${config.domain}/v2/logout?` +
                 `client_id=${config.clientId}&` +
                 `returnTo=${window.location.href}`;
-            $("#alert-message").html("<p>" + error + "</p><div>" +
-                `<a href="${href}" class="btn btn-warning">Understood</a></div>`);
+            $("#alert-message").html("<h5>" + error + "</h5>" +
+                "<p>If you believe this is an error, please email " +
+                "<a href='mailto:contact@cri-conf.org'>contact@cri-conf.org</a></p>" +
+                `<p><a href="${href}" class="btn btn-danger">Try again</a></p>`);
             console.log(error);
             $("#alert-section").show();
+            $("#login").addClass("disabled");
         }
     }
-    // await updateUI();
+
     const string_image_generator = function (str, colidx) {
         return function (rowData, rowIdx) {
             return rowData[colidx].includes(str)
@@ -44,6 +47,8 @@ authenticate = async () => {
         paging: false,
         ordering: false,
         info: true,
+        responsive: true,
+        stateSave: true,
         order: [[0, 'desc']],
         rowGroup: {
             dataSrc: 0,
@@ -112,7 +117,6 @@ const updateUI = async () => {
     const login_el = $("#login");
 
     const dt = await $('#talks-table').DataTable();
-    let talk_info = {};
     let zoom_link = "";
 
     if (authenticated) {
@@ -126,14 +130,14 @@ const updateUI = async () => {
         const client_info = await auth0.getIdTokenClaims();
         zoom_link = client_info["https://cri-conf.org/talks"];
     } else {
-        await login_el.html("Login");
+        await login_el.html("Login or Sign up");
         try {
             login_el.click(() => {
                 auth0.loginWithRedirect({
                     redirect_uri: window.location.href,
                 });
             });
-        } catch(e) {
+        } catch (e) {
             login_el.addClass("disabled");
         }
     }
@@ -183,7 +187,13 @@ const updateUI = async () => {
                     $("#spotlight-info").html(
                         si.row[3]
                     );
-                    $("#spotlight-watch").fadeIn().attr("href", zoom_link);
+                    let spotlight_watch = $("#spotlight-watch");
+                    if (authenticated) {
+                        spotlight_watch.fadeIn().removeClass("disabled").removeClass("btn-light").addClass("btn-primary");
+                        spotlight_watch.attr("href", zoom_link).html("Join <i class=\"fa fa-external-link\"></i>");
+                    } else {
+                        spotlight_watch.hide();
+                    }
                     matched_event = true;
                 }
             }
@@ -228,7 +238,14 @@ const updateUI = async () => {
             $("#spotlight-info").html(
                 si.row[3]
             );
-            $("#spotlight-watch").hide();
+            let spotlight_watch = $("#spotlight-watch");
+            if (authenticated) {
+                spotlight_watch.fadeIn().addClass("disabled").addClass("btn-light").removeClass("btn-primary");
+                spotlight_watch.attr("href", "#").html("Join <i class=\"fa fa-external-link\"></i>");
+            } else {
+                $("#spotlight-watch").hide();
+            }
+
         } else {
             $("#spotlight_card").fadeOut();
         }
