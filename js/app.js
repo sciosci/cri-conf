@@ -8,7 +8,9 @@ authenticate = async () => {
     try {
         auth0 = await createAuth0Client({
             domain: config.domain,
-            client_id: config.clientId
+            client_id: config.clientId,
+            setRefreshTokens: true,
+            cacheLocation: 'localstorage'
         });
         await auth0.getTokenSilently();
     } catch (error) {
@@ -92,10 +94,6 @@ authenticate = async () => {
         }
     });
 
-    // $("#talks-table").ready(() => {
-    //
-    // });
-    // NEW - check for the code and state parameters
     const query = window.location.search;
     if (query.includes("code=") && query.includes("state=")) {
         // Process the login state
@@ -124,7 +122,7 @@ const updateUI = async () => {
         await login_el.html(`Logout, ${u.nickname}!`);
         login_el.click(() => {
             auth0.logout({
-                returnTo: window.location.origin
+                returnTo: window.location.href
             });
         });
         const client_info = await auth0.getIdTokenClaims();
