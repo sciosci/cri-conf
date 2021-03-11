@@ -26,6 +26,13 @@
   display: block;
 }
 
+.module2 {
+    width: auto;
+    margin-left: 50px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
 .module {
   width: auto;
   margin-left: 50px;
