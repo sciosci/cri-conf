@@ -50,7 +50,7 @@ authenticate = async () => {
         ordering: false,
         info: true,
         responsive: true,
-        stateSave: true,
+        stateSave: false,
         order: [[0, 'desc']],
         rowGroup: {
             dataSrc: 0,
