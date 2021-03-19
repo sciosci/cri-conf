@@ -86,13 +86,20 @@ authenticate = async () => {
         // deferRender: true,
         initComplete: updateUI,
         autoWidth: false,
-        dom: 'Plfrtip',
+        dom: 'BPlfrtip',
         searchPanes: {
             layout: 'columns-3',
             columns: [0, 5, 1],
             cascadePanes: true,
-        }
-    });
+        },
+        buttons: [
+            {
+                extend: 'pdf',
+                text: 'Export to PDF'
+            },
+            'print'
+        ]
+    })
 
     const query = window.location.search;
     if (query.includes("code=") && query.includes("state=")) {
