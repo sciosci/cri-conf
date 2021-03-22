@@ -65,10 +65,17 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="#schedule">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">F.A.Q</a>
+                </li>
+                <li class="nav-item">
                     <a id="login" role="button" class="btn btn-primary btn-sm" href="#" style="display: none"></a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://twitter.com/cri_conference" class="nav-link" target="_blank" rel="noopener noreferrer"><i
+                    <a href="https://twitter.com/cri_conference" class="nav-link" target="_blank"
+                       rel="noopener noreferrer"><i
                             class="fa fa-twitter"></i></a>
                 </li>
             </ul>
@@ -81,7 +88,7 @@
 ============================-->
 <!--<section id="intro">-->
 <!--    <div class="intro-container wow fadeIn">-->
-<div id="spotlight" class="container-fluid pt-2 pb-4" style="background: #0e1b4d; display: none">
+<div id="spotlight" class="container-fluid pt-2 pb-4" style="background: #0e1b4d">
     <div id="alert-section" class="col-4 mx-auto" style="display: none">
         <div class="alert alert-danger alert-dismissible fade show align-self-center" role="alert">
             <div id="alert-message"></div>
@@ -127,9 +134,20 @@
     }
 
 </style>
-<main id="main" style="display: none">
-    <section id="talks" class="pt-4 pb-4 px-4">
-        <div class="container pt-4 pb-4" style="box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);">
+<main>
+    <section class="pt-4 pb-4 px-4">
+        <div class="container">
+            <div class="row">
+                <h3 id="schedule"><a href="#schedule">Schedule</a></h3>
+            </div>
+            <div id="loading" class="row text-left">
+                <div class="spinner-border text-info" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="main" class="container pt-4 pb-4" style="display: none; box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);">
             <div class="table-responsive">
                 <table id="talks-table" class="table table-striped table-bordered">
                     <thead>
@@ -311,7 +329,7 @@
                         </td>
                         <td>Invited Presentation</td>
                     </tr>
-                    <tr id="talk_nuijten">
+                    <tr>
                         <td>2021-03-23</td>
                         <td>11:45 AM</td>
                         <td>
@@ -324,7 +342,7 @@
                         </td>
                         <td>Social</td>
                     </tr>
-                    <tr id="talk_nuijten">
+                    <tr>
                         <td>2021-03-23</td>
                         <td>12:15 PM</td>
                         <td>
@@ -580,14 +598,14 @@
                         <td>
                             <h5>Responsible Use of Support Tools for Plagiarism Detection
                             </h5>
-                            <p>Many academic institutions are of the opinion that they can simply solve the problem of 
+                            <p>Many academic institutions are of the opinion that they can simply solve the problem of
                                 plagiarism by purchasing the use of so-called plagiarism detection software. But as a
-                                recent test of such support tools shows, the systems don't find all plagiarism and will 
-                                report text overlap that is not plagiarism as if it were. Institutions that rely only 
-                                on some similarity measure for determining sanctions need to be aware of how meaningless 
+                                recent test of such support tools shows, the systems don't find all plagiarism and will
+                                report text overlap that is not plagiarism as if it were. Institutions that rely only
+                                on some similarity measure for determining sanctions need to be aware of how meaningless
                                 the numbers these systems report are.</p>
-                            <p>In this talk the results of the recent test of support tools for detecting plagiarism 
-                                conducted by the European Network of Academic Integrity will be presented, followed 
+                            <p>In this talk the results of the recent test of support tools for detecting plagiarism
+                                conducted by the European Network of Academic Integrity will be presented, followed
                                 by a discussion of what constitutes the responsible use of such tools.</p>
                         </td>
                         <td>
@@ -747,7 +765,8 @@
                                 the
                                 number of submissions: reviewing them is mostly done manually in a time consuming and
                                 costly
-                                manner. This presentation will suggest that we can use artificial intelligence (AI) to improve
+                                manner. This presentation will suggest that we can use artificial intelligence (AI) to
+                                improve
                                 how
                                 publications are filtered at an unprecedented scale and accuracy levels. The key to
                                 achieving these goals is to take a page from AI’s book: create high-quality, large-scale
@@ -974,33 +993,58 @@
                         </td>
                         <td>
                             <h5>Ignorance or mimicry? Lessons from the merchants of doubt</h5>
-                            <p>Agnotology – a new field dedicated to the study of ignorance -- has provided crucial insights into the 
-                                corporate staging and management of scientific controversies on topics of great public importance ranging 
-                                from the dangers of tobacco smoking to global warming, and others in between.  (The book and eponymous 
-                                film Merchants of Doubts or the work of Robert Proctor are examples).  A shared goal of these corporate 
-                                interventions, the agnotologists have argued, is the questioning of scientific evidence and claims so as 
-                                to create the appearance that these issues are not matters of remarkably solid consensus but, to the 
-                                contrary, the focus of substantial controversies among scientists themselves. The effect of such 
-                                misinformation campaigns has been to splinter or confuse the public’s response, dangerously delaying 
+                            <p>Agnotology – a new field dedicated to the study of ignorance -- has provided crucial
+                                insights into the
+                                corporate staging and management of scientific controversies on topics of great public
+                                importance ranging
+                                from the dangers of tobacco smoking to global warming, and others in between. (The book
+                                and eponymous
+                                film Merchants of Doubts or the work of Robert Proctor are examples). A shared goal of
+                                these corporate
+                                interventions, the agnotologists have argued, is the questioning of scientific evidence
+                                and claims so as
+                                to create the appearance that these issues are not matters of remarkably solid consensus
+                                but, to the
+                                contrary, the focus of substantial controversies among scientists themselves. The effect
+                                of such
+                                misinformation campaigns has been to splinter or confuse the public’s response,
+                                dangerously delaying
                                 urgent regulatory interventions.</p>
-                            <p>But while the agnotologists’ goal has been to study the production of non-knowledge or the destruction 
-                                of knowledge  -- from the feeding of false beliefs to the public to actively creating gaps in the 
-                                availability of knowledge by making it secret -- their most original and interesting contribution has 
-                                been the thick description of the techniques, strategies, and rhetoric of the production of doubt about 
-                                science and medicine – something that is exceptionally effective precisely because it is neither truth 
-                                nor falsehood, neither knowledge nor ignorance.  Its power is its elusiveness.</p>
-                            <p>Adding new examples to those exposed by the agnotologists, I argue that the production of doubt is not 
-                                the production of ignorance but an essentially different regime that, while coming to life in the 
-                                traditional form of scientific controversies, it does not aim at producing or manipulating the content 
-                                of knowledge but at strategically subverting the norms of science as a profession.  The production of 
-                                doubt is neither the negative mirror image of the production of positive knowledge, nor simply a 
-                                scientific Potemkin village where politics is camouflaged as science.  Given the extraordinarily high 
-                                stakes involved, it may be comforting to believe that, while highly damaging to the credibility of science, 
-                                the systematic production of doubt is also completely external to it.  It is politics, not science.  
-                                I share the agnotologists’ sentiments and commitments, and believe that science and the corporate production 
-                                of doubt are driven by radically different goals.  Sadly, however, they are not easily separable in a formal, 
-                                conceptual sense. The strategic production of doubt is a very specific form of parasitism that cannot exist 
-                                outside of its host.  Its effectiveness derives only from mobilizing the authority of science against itself.</p>
+                            <p>But while the agnotologists’ goal has been to study the production of non-knowledge or
+                                the destruction
+                                of knowledge -- from the feeding of false beliefs to the public to actively creating
+                                gaps in the
+                                availability of knowledge by making it secret -- their most original and interesting
+                                contribution has
+                                been the thick description of the techniques, strategies, and rhetoric of the production
+                                of doubt about
+                                science and medicine – something that is exceptionally effective precisely because it is
+                                neither truth
+                                nor falsehood, neither knowledge nor ignorance. Its power is its elusiveness.</p>
+                            <p>Adding new examples to those exposed by the agnotologists, I argue that the production of
+                                doubt is not
+                                the production of ignorance but an essentially different regime that, while coming to
+                                life in the
+                                traditional form of scientific controversies, it does not aim at producing or
+                                manipulating the content
+                                of knowledge but at strategically subverting the norms of science as a profession. The
+                                production of
+                                doubt is neither the negative mirror image of the production of positive knowledge, nor
+                                simply a
+                                scientific Potemkin village where politics is camouflaged as science. Given the
+                                extraordinarily high
+                                stakes involved, it may be comforting to believe that, while highly damaging to the
+                                credibility of science,
+                                the systematic production of doubt is also completely external to it. It is politics,
+                                not science.
+                                I share the agnotologists’ sentiments and commitments, and believe that science and the
+                                corporate production
+                                of doubt are driven by radically different goals. Sadly, however, they are not easily
+                                separable in a formal,
+                                conceptual sense. The strategic production of doubt is a very specific form of
+                                parasitism that cannot exist
+                                outside of its host. Its effectiveness derives only from mobilizing the authority of
+                                science against itself.</p>
                         </td>
                         <td>
                         </td>
@@ -1215,17 +1259,108 @@
             </div>
         </div>
     </section>
+    <section class="pt-4 pb-4 px-4">
+        <div class="container">
+            <div class="row">
+                <h3 id="faq"><a href="#faq">Frequently Asked Questions (FAQ)</a></h3>
+            </div>
+            <div class="row">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                    I registered to the conference, but how do I watch the live event?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                We are running the conference in <a href="https://zoom.us/meetings">Zoom Meetings</a>.
+                                Please install or upgrade your Zoom software to its latest version. Then, do the
+                                following:
+                                <ol>
+                                    <li>Signup to the virtual conference (top right "Login or Sign up" button) using the
+                                        same email you used during registration
+                                    </li>
+                                    <li>Check your email to confirm your address</li>
+                                    <li>Once your email is checked, log in to this page using the "Login or Sign up"
+                                        button above
+                                    </li>
+                                    <li>After login, you will see instructions to watch the event live</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                    I signed up and logged in, but the system says I am not registered for the event
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>You can sign up to this web page, but you will not see information to watch the event
+                                    live if you are not registered for the event.</p>
+                                <p><strong>Keep in mind that we sync the registered with the signup list manually every
+                                    day, allowing at least 24 hours before logging in.</strong></p>
+                                <p>If you are still having issues, please email <a href="mailto:contact@cri-conf.org">contact@cri-conf.org</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-<div id="loading" class="text-center" style="position: fixed;
-width: 100%;
-height:100%;
-display: flex;
-align-items: center;
-top: 0;">
-    <div class="spinner-grow" role="status" style="display: flex; margin: 0 auto">
-        <span class="sr-only">Loading...</span>
+<!--==========================
+  Footer
+============================-->
+<hr>
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-info">
+                    <h1><a href="#intro" class="scrollto"><span>CRI-CONF</span> 2021</a></h1>
+                    <p>This conference will bring researchers from Biomedical Sciences and Ethics as well as Computer
+                        Scientists, AI researchers, and statisticians to discuss how research integrity investigations
+                        can be made faster, more accurate, and systematic with the use of computational methods.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i> <a href="code-of-conduct.html">Virtual Event Code of
+                            Conduct</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        Computational Research Integrity Conference<br><br>
+                        Questions about events and logistics:<br> <strong>Lisette Child</strong> <a
+                            href="mailto:ldchild@syr.edu">ldchild@syr.edu</a><br><br>
+                        Questions about details on this website:<br> <strong>Elizabeth Novoa</strong> <a
+                            href="mailto:enovoa@unikaanalytics.com">enovoa@unikaanalytics.com</a><br><br>
+                        Other questions:<br> <strong>Daniel Acuna</strong> <a href="mailto:deacuna@syr.edu">deacuna@syr.edu</a><br>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/cri_conference" target="_blank" rel="noopener noreferrer"><i
+                                class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</footer><!-- End footer -->
 
 <!-- JavaScript Libraries -->
 <script src="lib/jquery/jquery.min.js"></script>
