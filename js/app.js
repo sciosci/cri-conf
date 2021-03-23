@@ -148,10 +148,10 @@ const updateUI = async () => {
     }
 
     let slot_information = [];
-    let rn = moment().tz("America/New_York");
+    let rn = moment();
     for (let i = 0; i < dt.rows().data().length; i++) {
         const slot_timestamp = dt.rows().data()[i][0] + " " + dt.rows().data()[i][1];
-        const m = moment(slot_timestamp, "YYYY-MM-DD hh:mm A").tz("America/New_York");
+        const m = moment.tz(slot_timestamp, "YYYY-MM-DD hh:mm A", "America/New_York");
         slot_information.push({
             start: m,
             row: dt.rows().data()[i]
