@@ -216,7 +216,7 @@ const updateUI = async () => {
                 si = slot_information[i];
             }
         }
-        if (min_diff >= 0) {
+        if ((min_diff >= 0) && (min_diff !== Infinity)) {
             let timerId = 0;
             timerId =
                 countdown(
