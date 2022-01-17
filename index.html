@@ -132,7 +132,7 @@
         <p class="mb-4 pb-0">March 23-25, 2021</p>
         <p class="mb-0 pb-0"><del>Center for Strategic and International Studies, Washington, DC</del></p>
 		<p class="mb-4 pb-0">Online</p>
-        <a href="conference.html" class="btn btn-primary border-12">Enter virtual conference</a>
+        <a href="#schedule" class="btn btn-primary border-12">Watch videos</a>
     </div>
 </section>
 
@@ -367,7 +367,66 @@
         <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">March 25</a>
       </li>
     </ul>
-
+<style>
+  /* Just a parent container for the videos */
+.videos {
+  margin: 20px auto;
+  max-width: 700px;
+}
+/* Individual video container */
+.video-wrap {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.video-wrap .placeholder {
+  max-width: 700px;
+  width: 100%;
+}
+.video-wrap .play-btn {
+  position: absolute;
+  max-width: 700px;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1; /* needed if using Bootstrap */
+  text-align: center;
+  color: #eaeaea;
+  background-color: rgba(255,255,255,.4);
+  border-radius: 50px;
+  transition: color, background-color .2s ease;
+}
+.video-wrap .play-btn:hover,
+.video-wrap .play-btn:focus {
+  color: #000;
+  background-color: rgba(255,255,255,.8);
+  cursor: pointer;
+}
+.play-btn::after {
+  /*
+  Font Awesome recommends these styles
+  https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+  */
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  /*
+  Define the font family, weight, and icon
+  */
+  font-family: "FontAwesome";
+  font-weight: 900;
+  font-size: 60px;
+  content: "\f04b";
+  /* positioning tweaks */
+  padding-top: 20px;
+  padding-left: 10px;
+}
+</style>
     <h3 class="sub-heading">All times in New York, US time.</h3>
 
     <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -382,7 +441,6 @@
             <!-- <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p> -->
           </div>
         </div>
-
         <div class="row schedule-item">
           <div class="col-md-2"><time>09:15 AM</time></div>
           <div class="col-md-10">
@@ -390,6 +448,15 @@
               <img src="img/speakers/Ranjini_Ambalavanar2.jpg" alt="Ranjini Ambalavanar">
             </div>
             <h4>Speaker <span>Ranjini Ambalavanar, ORI</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=v4xqrf9IyIk" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_ranjini.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Examining Questioned Data: Technology as a Detection Tool</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -412,6 +479,15 @@
               <img src="img/speakers/Jennifer_Byrne2.png" alt="Jennifer Byrne">
             </div>
             <h4>Speaker <span>Jennifer Byrne, The University of Sydney</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=OnIJq6X6nZQ" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_byrne.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Computational research integrity and cancer research: building tools and narratives to improve the health of the research literature</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -448,6 +524,15 @@
               <img src="img/speakers/Lauran_Corinna.jpg" alt="Lauran Qualkenbush; Corinna Raimondo">
             </div>
             <h4>Speakers <span>Lauran Qualkenbush &amp; Corinna Raimondo, Northwestern University</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=y3TDbiq5zYk" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_raimondo_qualkenbush.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>An inside look at real challenges in research misconduct investigations</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -497,6 +582,15 @@
               <img src="img/speakers/Edward_Delp2.jpg" alt="Edward J. Delp">
             </div>
             <h4>Speaker <span>Edward J. Delp, Purdue University</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=4DbWIk00wXQ" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_delp.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>A System for Forensic Analysis of Scientific Images</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -516,6 +610,15 @@
           <div class="col-md-2"><time>02:15 PM</time></div>
           <div class="col-md-10">
             <h4>Panel <span>Institutional investigators</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=ip54VzQWIRo" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_panel_institutional_investigators.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <ul>
               <li><a class="otherlink" href="panelist_details/pd_WandaJones.html">Wanda Jones</a>, ORI (panel chair)</li>
               <li>William C. Trenkle, USDA</li>
@@ -537,6 +640,15 @@
           <div class="col-md-2"><time>03:30 PM</time></div>
           <div class="col-md-10">
             <h4>Panel <span>Publishers</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=nH_9WKjDpOE" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_panel_publishers.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <ul>
               <li>Bernd Pulverer, EMBO (panel chair)</li>
               <li>Renee Hoch, PLOS</li>
@@ -573,6 +685,15 @@
               <img src="img/speakers/Elisabeth_Bik2.png" alt="Elisabeth Bik">
             </div>
             <h4>Speaker <span>Elisabeth Bik, Harbers-Bik LLC</span></h4>
+            <div class="videos">
+              <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=W7wSBdojmcs" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_bik.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Image duplication detection tools &#8212 insights from a human spotter</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -598,6 +719,13 @@
               <img src="img/speakers/Debora_Weber_Wulff2.jpg" alt="Debora Weber-Wulff">
             </div>
             <h4>Speaker <span>Debora Weber-Wulff, HTW Berlin - University of Applied Sciences</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=vW5KO6EDLIo" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_weber-wulff.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+              </div>
             <div class="container pt-4 module">
               <h6><strong>Responsible Use of Support Tools for Plagiarism Detection</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -634,6 +762,13 @@
               <img src="img/speakers/Michael_Lauer2.jpg" alt="Michael Lauer">
             </div>
             <h4>Speaker <span>Michael Lauer, NIH</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=0cX4Sev_1lU" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_lauer.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Roles and Responsibilities for Promoting Research Integrity</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -652,6 +787,13 @@
               <img src="img/speakers/Matthew_Turek2.jpeg" alt="Matt Turek">
             </div>
             <h4>Speaker <span>Matt Turek, DARPA</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=7QjSWCoylmQ" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_turek.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Challenges and Approaches to Media Integrity</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -691,6 +833,13 @@
           <div class="col-md-2"><time>01:30 PM</time></div>
           <div class="col-md-10">
             <h4>Panel <span>Funders</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=6sGjwgO3dfU" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_panel_funders.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <ul>
               <li>Benyamin Margolis, ORI (panel chair)</li>
               <li>Wenda Bauchspies, NSF</li>
@@ -720,6 +869,13 @@
           <div class="col-md-2"><time>03:30 PM</time></div>
           <div class="col-md-10">
             <h4>Panel <span>Tool developers</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=gZ4VBYTpDGs" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_panel_tool_developers.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <ul>
               <li>Daniel Acuna, Syracuse University</li>
               <li>Jennifer Byrne, The University of Sydney</li>
@@ -765,6 +921,13 @@
               <img src="img/speakers/Boris_Barbour.jpg" alt="Boris Barbour">
             </div>
             <h4>Speaker <span>Boris Barbour, The PubPeer Foundation</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=bqNdESgaroY" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_barbour.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>PubPeer, past, present and future</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -808,6 +971,13 @@
               <img src="img/speakers/Walter_Scheirer2.jpg" alt="Walter Scheirer">
             </div>
             <h4>Speaker <span>Walter Scheirer, University of Notre Dame</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=4_oQVBOgJd4" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_scheirer.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Understanding the Provenance of Visual Disinformation Targeting Science</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -846,6 +1016,13 @@
               <img src="img/speakers/Mario_Biagioli2.jpg" alt="Mario Biagioli">
             </div>
             <h4>Speaker <span>Mario Biagioli, UCLA</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=lQ0iAj9muFg" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_biagioli.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Ignorance or mimicry? Lessons from the merchants of doubt</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -888,6 +1065,13 @@
               <img src="img/speakers/Thorsten_Beck2.jpg" alt="Thorsten Beck">
             </div>
             <h4>Speaker <span>Thorsten Beck, HEADT Centre - Humboldt University of Berlin</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=FMSl-zglC5g" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_beck.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>Image Manipulation Detection — From Visual Inspection to Technology Driven Procedures?</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -920,6 +1104,13 @@
               <img src="img/speakers/Ivan_Oransky2.jpg" alt="Ivan Oransky">
             </div>
             <h4>Speaker <span>Ivan Oransky, Retraction Watch</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=4kAS18z96Gw" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_oransky.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <div class="container pt-4 module">
               <h6><strong>From Cancer to COVID-19, Does Science Self-Correct?</strong></h6>
               <div class="addReadMore showlesscontent">
@@ -937,6 +1128,13 @@
           <div class="col-md-2"><time>02:15 PM</time></div>
           <div class="col-md-10">
             <h4>Panel <span>Journalists</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=y3bDHpzLYCc" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_panel_journalists.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <ul>
               <li>Stephanie Lee, Buzzfeed News</li>
               <li>Ivan Oransky, Retraction Watch</li>
@@ -958,6 +1156,13 @@
           <div class="col-md-2"><time>03:30 PM</time></div>
           <div class="col-md-10">
             <h4>Panel <span>Investigators/whistleblowers</span></h4>
+            <div class="video-wrap">
+                <a href="https://www.youtube.com/watch?v=sue4hUbyQlY" target="_blank">
+                  <div class="play-btn"></div>
+                  <img src="img/videos/video_panel_investigators-whistleblowers.png.png"
+                       class="embed-responsive"  style="position: inherit">
+                </a>
+            </div>
             <ul>
               <li>Paul Brookes, University of Rochester (panel chair)</li>
               <li>Boris Barbour, The PubPeer Foundation</li>
